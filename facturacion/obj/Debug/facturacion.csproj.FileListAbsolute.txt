@@ -1,0 +1,123 @@
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.exe
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.pdb
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\bin\Debug\facturacion.exe
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\bin\Debug\facturacion.pdb
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\ResolveAssemblyReference.cache
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\JANETT RODRIGUEZ\PROGRAMACION\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\facturacion\facturacion\bin\Debug\facturacion.exe.config
+D:\facturacion\facturacion\obj\Debug\facturacion.exe
+D:\facturacion\facturacion\obj\Debug\facturacion.pdb
+D:\facturacion\facturacion\bin\Debug\facturacion.exe
+D:\facturacion\facturacion\bin\Debug\facturacion.pdb
+D:\facturacion\facturacion\obj\Debug\facturacion.csprojResolveAssemblyReference.cache
+D:\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+D:\facturacion\facturacion\obj\Debug\facturacion.csproj.GenerateResource.Cache
+C:\Users\Bladimir\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe.config
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.exe
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.pdb
+C:\Users\Bladimir\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe
+C:\Users\Bladimir\Desktop\facturacion\facturacion\bin\Debug\facturacion.pdb
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.csprojResolveAssemblyReference.cache
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.csproj.GenerateResource.Cache
+E:\Users\smart\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe.config
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.exe
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.pdb
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.csprojResolveAssemblyReference.cache
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.csproj.GenerateResource.Cache
+E:\Users\smart\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe
+E:\Users\smart\Desktop\facturacion\facturacion\bin\Debug\facturacion.pdb
+E:\Users\smart\Desktop\facturacion\facturacion\obj\Debug\facturacion.Form1.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\bin\Debug\facturacion.exe.config
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.exe
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.pdb
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\bin\Debug\facturacion.exe
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\bin\Debug\facturacion.pdb
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.csprojResolveAssemblyReference.cache
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.Form1.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.csproj.GenerateResource.Cache
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.Frm_listarproveedor.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.Frm_registarproveedor.resources
+E:\Users\smart\Desktop\Programacion4 ciclo\facturacion\facturacion\obj\Debug\facturacion.Frm_reportes.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe.config
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.exe
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.Form1.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.Frm_reportes.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.Frm_listarproveedor.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.Frm_registarproveedor.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource.write.1.tlog

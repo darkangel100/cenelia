@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05DB59FF-6F92-4EBD-8527-4E5B6B8B7EFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>facturacion</RootNamespace>
+    <AssemblyName>facturacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controlador\AccesoCliente.cs" />
+    <Compile Include="controlador\AccesoCuenta.cs" />
+    <Compile Include="controlador\AccesoDatos.cs" />
+    <Compile Include="controlador\AccesoDetalleFactura.cs" />
+    <Compile Include="controlador\AccesoFactura.cs" />
+    <Compile Include="controlador\AccesoMarca.cs" />
+    <Compile Include="controlador\AccesoProducto.cs" />
+    <Compile Include="controlador\AccesoRol.cs" />
+    <Compile Include="controlador\AccesoUsuario.cs" />
+    <Compile Include="controlador\Reportes.cs" />
+    <Compile Include="controlador\Sesiones.cs" />
+    <Compile Include="controlador\Utiles.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_reportes.Designer.cs">
+      <DependentUpon>Frm_reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_listarproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_listarproveedor.Designer.cs">
+      <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_registarproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_registarproveedor.Designer.cs">
+      <DependentUpon>Frm_registarproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\Cuenta.cs" />
+    <Compile Include="modelo\DetalleFactura.cs" />
+    <Compile Include="modelo\Direccion.cs" />
+    <Compile Include="modelo\Factura.cs" />
+    <Compile Include="modelo\Marca.cs" />
+    <Compile Include="modelo\Persona.cs" />
+    <Compile Include="modelo\Producto.cs" />
+    <Compile Include="modelo\Proveedor.cs" />
+    <Compile Include="modelo\Rol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_reportes.resx">
+      <DependentUpon>Frm_reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_listarproveedor.resx">
+      <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_registarproveedor.resx">
+      <DependentUpon>Frm_registarproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_cliente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_componentes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_componentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_factura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_inicio.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_listarCliente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_listarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_listarMarca.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_listarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\frm_listarProducto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_listarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_marca.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_nuevoUsuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_nuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_Producto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="REPORTE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_cliente.Designer.cs">
+      <DependentUpon>Frm_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_componentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_componentes.Designer.cs">
+      <DependentUpon>Frm_componentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_factura.Designer.cs">
+      <DependentUpon>Frm_factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_inicio.Designer.cs">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_listarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_listarCliente.Designer.cs">
+      <DependentUpon>Frm_listarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_listarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_listarMarca.Designer.cs">
+      <DependentUpon>Frm_listarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frm_listarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frm_listarProducto.Designer.cs">
+      <DependentUpon>frm_listarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_marca.Designer.cs">
+      <DependentUpon>Frm_marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_nuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_nuevoUsuario.Designer.cs">
+      <DependentUpon>Frm_nuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Frm_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_Producto.Designer.cs">
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\modeloTabla\ModeloDetalleFactura.cs" />
+    <Compile Include="vista\modeloTabla\ModeloTablaCliente.cs" />
+    <Compile Include="vista\modeloTabla\ModeloTablaProducto.cs" />
+    <Compile Include="vista\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
