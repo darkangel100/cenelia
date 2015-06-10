@@ -23,80 +23,25 @@ namespace facturacion.vista
             InitializeComponent();
         }
 
-        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnmin_Click(object sender, EventArgs e)
         {
-            this.inicio.Close();
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void registrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Frmprincipal_Load(object sender, EventArgs e)
         {
-            new Frm_Producto().ShowDialog();
-        }
-
-       
-        private void listarProductosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new frm_listarProducto().ShowDialog();
-        }
-
-      
-        private void registrarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_marca().ShowDialog();
-        }
-
-        private void listarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_listarMarca().ShowDialog();
-        }
-
-        private void facturaciònToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_factura().ShowDialog();
-        }
-
-        private void pruebaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            new Frm_componentes().ShowDialog();
-        }
-
-        private void Principal_Load(object sender, EventArgs e)
-        {
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-
-        }
-
-        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_listarCliente().ShowDialog();
+            lblfecha.Text = DateTime.Now.ToShortDateString();
+            //lbluser.Text = "Usuario: " + Program.usuario;
+            lblhora.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void reguistraClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Frm_cliente().ShowDialog();
+            FrmregistraCliente cliente = new FrmregistraCliente();
+            cliente.Show();
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void registrarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_registarproveedor().ShowDialog();
-        }
-
-        private void listarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Frm_listarproveedor().ShowDialog();
-        }
-
-        private void administrarLotesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
        
 
         

@@ -121,3 +121,5 @@ C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.
 C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource.read.1.tlog
 C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.write.1.tlog
 C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\facturacion.exe.config
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.exe

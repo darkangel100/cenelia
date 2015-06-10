@@ -58,24 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controlador\AccesoCliente.cs" />
-    <Compile Include="controlador\AccesoCuenta.cs" />
-    <Compile Include="controlador\AccesoDatos.cs" />
-    <Compile Include="controlador\AccesoDetalleFactura.cs" />
-    <Compile Include="controlador\AccesoFactura.cs" />
-    <Compile Include="controlador\AccesoMarca.cs" />
-    <Compile Include="controlador\AccesoProducto.cs" />
-    <Compile Include="controlador\AccesoRol.cs" />
-    <Compile Include="controlador\AccesoUsuario.cs" />
-    <Compile Include="controlador\Reportes.cs" />
-    <Compile Include="controlador\Sesiones.cs" />
     <Compile Include="controlador\Utiles.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +93,6 @@
     <Compile Include="modelo\Rol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_reportes.resx">
       <DependentUpon>Frm_reportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,10 +142,6 @@
     <EmbeddedResource Include="vista\Frm_marca.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Frm_marca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Frm_nuevoUsuario.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Frm_nuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_Producto.resx">
       <SubType>Designer</SubType>
@@ -247,21 +223,12 @@
     <Compile Include="vista\Frm_marca.Designer.cs">
       <DependentUpon>Frm_marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\Frm_nuevoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Frm_nuevoUsuario.Designer.cs">
-      <DependentUpon>Frm_nuevoUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\Frm_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\Frm_Producto.Designer.cs">
       <DependentUpon>Frm_Producto.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\modeloTabla\ModeloDetalleFactura.cs" />
-    <Compile Include="vista\modeloTabla\ModeloTablaCliente.cs" />
-    <Compile Include="vista\modeloTabla\ModeloTablaProducto.cs" />
     <Compile Include="vista\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +241,30 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_login2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
