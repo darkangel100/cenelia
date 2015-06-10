@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using facturacion.controlador;
-using facturacion.modelo;
+//using facturacion.modelo;
 
 namespace facturacion.vista
 {
@@ -47,8 +47,7 @@ namespace facturacion.vista
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            Frmprincipal principal = new Frmprincipal();
+Principal principal = new Principal ();
             principal.Show();
             this.Dispose(false);
         }
