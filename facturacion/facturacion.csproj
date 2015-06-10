@@ -82,15 +82,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="modelo\Cuenta.cs" />
-    <Compile Include="modelo\DetalleFactura.cs" />
-    <Compile Include="modelo\Direccion.cs" />
-    <Compile Include="modelo\Factura.cs" />
-    <Compile Include="modelo\Marca.cs" />
-    <Compile Include="modelo\Persona.cs" />
-    <Compile Include="modelo\Producto.cs" />
-    <Compile Include="modelo\Proveedor.cs" />
-    <Compile Include="modelo\Rol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_reportes.resx">
@@ -265,6 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
