@@ -26,7 +26,7 @@ namespace facturacion.controlador
             return band;
         }
         /**
-         *Para validar doubles 
+         *Para validar doubles de los textos
         */
         public static void soloDoubles(Object sender, KeyPressEventArgs e, TextBox txt)
         {
