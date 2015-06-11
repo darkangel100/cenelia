@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 24);
+            this.label1.Size = new System.Drawing.Size(230, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "LISTADO DE MARCAS";
             // 
@@ -135,6 +135,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_listarMarca";
+            this.Load += new System.EventHandler(this.Frm_listarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

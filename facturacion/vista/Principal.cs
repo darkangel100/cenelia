@@ -41,6 +41,11 @@ namespace facturacion.vista
             cliente.Show();
         }
 
+        private void administraciònToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
        
 

@@ -32,5 +32,10 @@ namespace facturacion
                 //Utiles.soloLetras(sender, e, this.txtbusacrproveedor, 0);
             }
         }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

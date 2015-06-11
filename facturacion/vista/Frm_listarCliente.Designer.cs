@@ -158,6 +158,7 @@
             this.btn_activar.TabIndex = 18;
             this.btn_activar.Text = "Activar/Desactivar";
             this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click_1);
             // 
             // label1
             // 

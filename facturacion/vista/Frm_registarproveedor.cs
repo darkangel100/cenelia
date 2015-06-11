@@ -22,6 +22,11 @@ namespace facturacion
             groupBox1.BackColor = Color.Transparent;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }

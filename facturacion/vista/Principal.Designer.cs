@@ -169,6 +169,7 @@
             this.administraciònToolStripMenuItem.Name = "administraciònToolStripMenuItem";
             this.administraciònToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administraciònToolStripMenuItem.Text = "Administra Productos";
+            this.administraciònToolStripMenuItem.Click += new System.EventHandler(this.administraciònToolStripMenuItem_Click);
             // 
             // administrarProductoToolStripMenuItem
             // 

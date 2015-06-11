@@ -40,11 +40,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -59,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controlador\Utiles.cs" />
-    <Compile Include="Frm_reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_reportes.Designer.cs">
-      <DependentUpon>Frm_reportes.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\Frm_listarproveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,9 +68,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_reportes.resx">
-      <DependentUpon>Frm_reportes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_listarproveedor.resx">
       <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,17 +79,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>REPORTE.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_cliente.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Frm_cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Frm_componentes.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Frm_componentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_factura.resx">
       <SubType>Designer</SubType>
@@ -152,22 +130,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="REPORTE.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>REPORTE.rpt</DependentUpon>
-    </Compile>
     <Compile Include="vista\Frm_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\Frm_cliente.Designer.cs">
       <DependentUpon>Frm_cliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\Frm_componentes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Frm_componentes.Designer.cs">
-      <DependentUpon>Frm_componentes.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\Frm_factura.cs">
       <SubType>Form</SubType>
