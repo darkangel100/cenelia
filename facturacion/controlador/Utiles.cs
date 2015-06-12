@@ -203,8 +203,15 @@ namespace facturacion.controlador
             
 
         }
-        
 
+        public static void limpiar(Control.ControlCollection cont)
+        {
+            foreach (Control c in cont)
+            {
+                if (c is TextBox)
+                    c.Text = "";
+            }
+        }
        
     }
 }

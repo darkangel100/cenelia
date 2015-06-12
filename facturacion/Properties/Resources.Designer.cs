@@ -103,6 +103,16 @@ namespace facturacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_2_icon {
+            get {
+                object obj = ResourceManager.GetObject("Delete-2-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fondo {
             get {
                 object obj = ResourceManager.GetObject("Fondo", resourceCulture);
@@ -146,6 +156,16 @@ namespace facturacion.Properties {
         internal static System.Drawing.Bitmap login2 {
             get {
                 object obj = ResourceManager.GetObject("login2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_as_icon {
+            get {
+                object obj = ResourceManager.GetObject("Save-as-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

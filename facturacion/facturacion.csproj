@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="controlador\ProveedorDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
     <Compile Include="modelo\Cuenta.cs" />
     <Compile Include="modelo\detalleFactura.cs" />
+    <Compile Include="modelo\Empresa.cs" />
     <Compile Include="modelo\Factura.cs" />
     <Compile Include="modelo\Persona.cs" />
     <Compile Include="modelo\Produccto.cs" />
@@ -235,7 +237,12 @@
   <ItemGroup>
     <None Include="Resources\login2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-2-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
