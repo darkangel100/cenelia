@@ -44,10 +44,10 @@ namespace facturacion
         {
             try
             {
-                ClienteDB objC = new ClienteDB();
+               ProveedorDB objC = new ProveedorDB();
                 int resp;
                 llenaCliente(objC);
-                resp = objC.InsertaCliente(objC.getPersona());
+                resp = objC.InsertaProveedor(objC.getPersona());
                 if (resp == 0)
                 {
                     MessageBox.Show("No se ingreso datos del Cliente", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -68,9 +68,9 @@ namespace facturacion
             try
             {
                 ProveedorDB  objP = new ProveedorDB();
-                int resp;
-                llenaCliente(objC);
-                resp = objP.ActualizaCliente(objP.getPersona());
+                int resp=0;
+                llenaCliente(objP);
+                //resp = objP.ActualizaCliente(objP.getPersona());
                 if (resp == 0)
                 {
                     MessageBox.Show("No se modifico datos del Cliente", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -79,7 +79,7 @@ namespace facturacion
                 {
                     MessageBox.Show("Cliente Modificado", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     estado = "";
-                    llenaClientes("A");
+                //    llenaProveedor("A");
                 }
             }
             catch (Exception ex)

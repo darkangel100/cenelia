@@ -56,6 +56,12 @@ namespace facturacion.vista
             Application.Exit();
         }
 
+        private void registrarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_registarproveedor proveedor = new Frm_registarproveedor();
+            proveedor.Show();
+        }
+
         
        
 

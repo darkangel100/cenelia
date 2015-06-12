@@ -62,7 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(504, 271);
             this.panel1.TabIndex = 1;
-           
             // 
             // lblHora
             // 
@@ -86,6 +85,7 @@
             this.btncerrar.Size = new System.Drawing.Size(35, 30);
             this.btncerrar.TabIndex = 8;
             this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click_1);
             // 
             // btnmin
             // 
@@ -95,6 +95,7 @@
             this.btnmin.Size = new System.Drawing.Size(35, 30);
             this.btnmin.TabIndex = 7;
             this.btnmin.UseVisualStyleBackColor = true;
+            this.btnmin.Click += new System.EventHandler(this.btnmin_Click_1);
             // 
             // lblFecha
             // 

@@ -18,18 +18,8 @@ namespace facturacion.vista
 
         }
 
-        private void btnmin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btncerrar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que desea Salir", "◄ AVISO ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
+        
+        
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
@@ -50,6 +40,19 @@ namespace facturacion.vista
 Principal principal = new Principal ();
             principal.Show();
             this.Dispose(false);
+        }
+
+        private void btncerrar_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro que desea Salir", "◄ AVISO ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnmin_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
       
        

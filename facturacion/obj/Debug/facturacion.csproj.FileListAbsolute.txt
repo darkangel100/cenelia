@@ -141,3 +141,4 @@ C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\fa
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.pdb
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\Facturacion.csprojResolveAssemblyReference.cache
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.FrmUsuario.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\MySql.Data.dll
