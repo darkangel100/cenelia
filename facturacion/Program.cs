@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using facturacion.vista;
 
 namespace facturacion
 {
@@ -15,7 +14,7 @@ namespace facturacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_inicio());
+            Application.Run(new facturacion.vista.Frm_inicio());
         }
     }
 }

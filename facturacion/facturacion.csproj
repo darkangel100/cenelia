@@ -40,6 +40,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\AplicacionVentas2\AplicacionVentas\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -53,7 +56,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
     <Compile Include="controlador\Utiles.cs" />
+    <Compile Include="modelo\Cuenta.cs" />
+    <Compile Include="modelo\detalleFactura.cs" />
+    <Compile Include="modelo\Factura.cs" />
+    <Compile Include="modelo\Persona.cs" />
+    <Compile Include="modelo\Produccto.cs" />
+    <Compile Include="modelo\Proveedor.cs" />
+    <Compile Include="modelo\Rol.cs" />
+    <Compile Include="vista\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Frm_listarproveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="vista\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_listarproveedor.resx">
       <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,9 +235,7 @@
   <ItemGroup>
     <None Include="Resources\login2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

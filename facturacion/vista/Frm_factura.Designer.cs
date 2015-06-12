@@ -30,7 +30,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_factura));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_tabla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -73,7 +72,6 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_cancelar);
             this.panel1.Controls.Add(this.btn_imprimir);
             this.panel1.Controls.Add(this.btn_guardar);
@@ -111,15 +109,17 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // comboBox1
             // 
-            this.button1.Location = new System.Drawing.Point(292, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 23);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cédula",
+            "Apellido"});
+            this.comboBox1.Location = new System.Drawing.Point(209, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(82, 21);
+            this.comboBox1.TabIndex = 33;
+            this.comboBox1.Text = "Opc Buscar";
             // 
             // btn_cancelar
             // 
@@ -149,7 +149,6 @@
             this.btn_guardar.TabIndex = 29;
             this.btn_guardar.Text = "GUARDAR";
             this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label12
             // 
@@ -186,7 +185,6 @@
             this.cbx_descuento.TabIndex = 26;
             this.cbx_descuento.Text = "Seleccione";
             this.cbx_descuento.UseWaitCursor = true;
-            this.cbx_descuento.SelectedIndexChanged += new System.EventHandler(this.cbx_descuento_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -268,7 +266,6 @@
             this.btn_agregar.TabIndex = 17;
             this.btn_agregar.Text = "AGREGAR";
             this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_nuevo
             // 
@@ -288,7 +285,6 @@
             this.btn_buscar.TabIndex = 15;
             this.btn_buscar.Text = "BUSCAR";
             this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // date_fecha
             // 
@@ -434,18 +430,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cédula",
-            "Apellido"});
-            this.comboBox1.Location = new System.Drawing.Point(209, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(82, 21);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.Text = "Opc Buscar";
-            // 
             // Frm_factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,7 +487,6 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_imprimir;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox comboBox1;
 

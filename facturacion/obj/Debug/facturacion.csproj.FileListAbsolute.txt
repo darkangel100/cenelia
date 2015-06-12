@@ -123,3 +123,21 @@ C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource-ResGen.
 C:\Users\SONY\Desktop\facturacion\facturacion\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\facturacion.exe.config
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.exe
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Frm_listarproveedor.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Frm_registarproveedor.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Properties.Resources.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Principal.resources
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\Facturacion.csproj.GenerateResource.Cache
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\facturacion.exe
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\facturacion.pdb
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.pdb
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\Facturacion.csprojResolveAssemblyReference.cache
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.FrmUsuario.resources

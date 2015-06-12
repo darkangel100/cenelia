@@ -158,7 +158,7 @@
             this.btn_activar.TabIndex = 18;
             this.btn_activar.Text = "Activar/Desactivar";
             this.btn_activar.UseVisualStyleBackColor = true;
-            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click_1);
+            
             // 
             // label1
             // 
@@ -379,7 +379,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_listarCliente";
-            this.Load += new System.EventHandler(this.Frm_listarCliente_Load);
+           
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_tabla)).EndInit();

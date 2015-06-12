@@ -123,7 +123,7 @@
             this.btn_guardar.TabIndex = 16;
             this.btn_guardar.Text = "GUARDAR";
             this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            
             // 
             // btn_cancelar
             // 
@@ -180,7 +180,7 @@
             this.txt_pc.Size = new System.Drawing.Size(158, 20);
             this.txt_pc.TabIndex = 14;
             this.txt_pc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pc_KeyPress);
-            this.txt_pc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_pc_KeyUp);
+           
             // 
             // Frm_Producto
             // 

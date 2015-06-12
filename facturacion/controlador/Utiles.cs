@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using facturacion.modelo;
+
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
@@ -203,27 +203,8 @@ namespace facturacion.controlador
             
 
         }
-        /**
-         * Obtiene la ruta del directorio en donde se guardan los archivos
-         * */
-        public static string ObtenerRuta()
-        {
-            string directory = "";
-            directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            return directory;            
-        }
+        
 
-        public static void guardarReporte(string datos, string nombre)
-        {
-            try
-            {
-                StreamWriter escribir = new StreamWriter(Utiles.ObtenerRuta()+"/facturacion/"+nombre+".html");
-                escribir.Write(datos);
-                escribir.Close();
-            }
-            catch (Exception ex)
-            {
-            }
-        }
+       
     }
 }

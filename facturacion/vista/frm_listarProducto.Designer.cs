@@ -37,6 +37,14 @@
             this.cbx_criterio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_tabla)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,7 +60,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(601, 338);
+            this.panel1.Size = new System.Drawing.Size(816, 338);
             this.panel1.TabIndex = 0;
             // 
             // btn_cancelar
@@ -63,7 +71,6 @@
             this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_modificar
             // 
@@ -73,14 +80,25 @@
             this.btn_modificar.TabIndex = 3;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // tbl_tabla
             // 
+            this.tbl_tabla.AllowUserToAddRows = false;
+            this.tbl_tabla.AllowUserToDeleteRows = false;
             this.tbl_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbl_tabla.Location = new System.Drawing.Point(14, 131);
+            this.tbl_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column2,
+            this.Column8,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.tbl_tabla.Location = new System.Drawing.Point(3, 131);
             this.tbl_tabla.Name = "tbl_tabla";
-            this.tbl_tabla.Size = new System.Drawing.Size(580, 150);
+            this.tbl_tabla.ReadOnly = true;
+            this.tbl_tabla.Size = new System.Drawing.Size(806, 150);
             this.tbl_tabla.TabIndex = 2;
             // 
             // panel2
@@ -103,7 +121,6 @@
             this.btn_buscar.TabIndex = 3;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_texto
             // 
@@ -111,7 +128,6 @@
             this.txt_texto.Name = "txt_texto";
             this.txt_texto.Size = new System.Drawing.Size(191, 20);
             this.txt_texto.TabIndex = 2;
-           
             // 
             // cbx_criterio
             // 
@@ -146,11 +162,59 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "LISTAR PRODUCTOS";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Unidad";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "PVP";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Marca";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Presentacion";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Fecha Elab";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Fecha Cad";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // frm_listarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 342);
+            this.ClientSize = new System.Drawing.Size(848, 342);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -182,6 +246,14 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.DataGridView tbl_tabla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
 
     }
 }

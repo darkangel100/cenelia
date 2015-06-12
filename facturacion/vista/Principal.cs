@@ -37,13 +37,23 @@ namespace facturacion.vista
 
         private void reguistraClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmregistraCliente cliente = new FrmregistraCliente();
+            Frm_cliente cliente = new Frm_cliente ();
             cliente.Show();
         }
 
         private void administraciònToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         

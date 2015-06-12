@@ -80,7 +80,7 @@
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+           
             // 
             // cbx_criiterio
             // 
@@ -101,7 +101,7 @@
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+           
             // 
             // btn_cancelar
             // 
@@ -111,7 +111,7 @@
             this.btn_cancelar.TabIndex = 8;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            
             // 
             // Frm_listarMarca
             // 
@@ -135,7 +135,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_listarMarca";
-            this.Load += new System.EventHandler(this.Frm_listarMarca_Load);
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -72,7 +72,7 @@
             this.btn_guardar.TabIndex = 3;
             this.btn_guardar.Text = "GUARDAR";
             this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            
             // 
             // button2
             // 
@@ -82,7 +82,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+           
             // 
             // errorProvider1
             // 
