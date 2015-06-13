@@ -154,6 +154,7 @@
             this.reguistraClienteToolStripMenuItem.Name = "reguistraClienteToolStripMenuItem";
             this.reguistraClienteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.reguistraClienteToolStripMenuItem.Text = "Registra Cliente";
+            this.reguistraClienteToolStripMenuItem.Click += new System.EventHandler(this.reguistraClienteToolStripMenuItem_Click);
             // 
             // buscarClienteToolStripMenuItem
             // 

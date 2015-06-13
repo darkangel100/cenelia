@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="controlador\PersonaDB.cs" />
     <Compile Include="controlador\ProveedorDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
     <Compile Include="modelo\Cuenta.cs" />
@@ -67,6 +68,12 @@
     <Compile Include="modelo\Produccto.cs" />
     <Compile Include="modelo\Proveedor.cs" />
     <Compile Include="modelo\Rol.cs" />
+    <Compile Include="vista\Frm RegisraClente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm RegisraClente.Designer.cs">
+      <DependentUpon>Frm RegisraClente.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="vista\Frm RegisraClente.resx">
+      <DependentUpon>Frm RegisraClente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,10 +110,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\Frm_cliente.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Frm_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_factura.resx">
       <SubType>Designer</SubType>
@@ -151,12 +157,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="vista\Frm_cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Frm_cliente.Designer.cs">
-      <DependentUpon>Frm_cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\Frm_factura.cs">
       <SubType>Form</SubType>

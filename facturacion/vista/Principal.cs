@@ -35,11 +35,7 @@ namespace facturacion.vista
             lblhora.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void reguistraClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_cliente cliente = new Frm_cliente ();
-            cliente.Show();
-        }
+       
 
         private void administraciònToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,6 +57,14 @@ namespace facturacion.vista
             Frm_registarproveedor proveedor = new Frm_registarproveedor();
             proveedor.Show();
         }
+
+        private void reguistraClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_RegisraClente cliente = new Frm_RegisraClente();
+            cliente.Show();
+        }
+
+        
 
         
        

@@ -126,7 +126,6 @@ C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\fa
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Frm_listarproveedor.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Frm_registarproveedor.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.Properties.Resources.resources
-C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
@@ -142,3 +141,4 @@ C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\fa
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\Facturacion.csprojResolveAssemblyReference.cache
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.FrmUsuario.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\MySql.Data.dll
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_RegisraClente.resources
