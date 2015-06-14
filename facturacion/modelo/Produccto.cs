@@ -11,8 +11,15 @@ namespace facturacion.modelo
         private string nombre;
         private string presentacion;
         private string unidad;
-        private string codigo;       
+        private string codigo; 
         private List<Produccto> listaProductos = new List<Produccto>();
+        private string marca;
+
+        public string Marca
+        {
+            get { return marca; }
+            set { marca = value; }
+        }
         
         private string estado = "activo";
          public string Presentacion

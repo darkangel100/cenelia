@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="controlador\LotesDB.cs" />
     <Compile Include="controlador\PersonaDB.cs" />
+    <Compile Include="controlador\ProductoDB.cs" />
     <Compile Include="controlador\ProveedorDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
     <Compile Include="Frm_RegistroEmpresa.cs">

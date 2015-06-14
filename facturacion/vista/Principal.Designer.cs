@@ -193,6 +193,7 @@
             this.registrarProductosToolStripMenuItem.Name = "registrarProductosToolStripMenuItem";
             this.registrarProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.registrarProductosToolStripMenuItem.Text = "Registrar Productos";
+            this.registrarProductosToolStripMenuItem.Click += new System.EventHandler(this.registrarProductosToolStripMenuItem_Click);
             // 
             // administrarMarcasToolStripMenuItem
             // 

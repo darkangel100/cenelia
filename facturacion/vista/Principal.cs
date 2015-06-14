@@ -64,6 +64,12 @@ namespace facturacion.vista
             cliente.Show();
         }
 
+        private void registrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Producto pro = new Frm_Producto();
+            pro.Show();
+        }
+
         
 
         
