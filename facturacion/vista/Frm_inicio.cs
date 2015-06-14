@@ -8,7 +8,7 @@ using facturacion.controlador;
 using facturacion.modelo;
 
 using MySql.Data.MySqlClient;
-using facturacion.modelo;
+
 using System.Data;
 
 namespace facturacion.vista
