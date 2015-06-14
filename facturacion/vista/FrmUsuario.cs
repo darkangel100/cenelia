@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using facturacion.controlador;
-using facturacion.controlador;
+
 namespace facturacion.vista
 {
     public partial class FrmUsuario : Form
@@ -50,7 +50,7 @@ namespace facturacion.vista
                 int resc;
                 llenaUsuario(objusu);
                 resp = objusu.InsertaCliente(objusu.getPersona());
-                CuentaDB objc = new CuentaDB();
+             CuentaDB objc = new CuentaDB();
                 llenacamcuen(objc);
                 resc = objc.ingresacuenta(objc.getCuenta());
 
