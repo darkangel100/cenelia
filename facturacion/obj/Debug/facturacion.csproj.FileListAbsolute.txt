@@ -43,15 +43,12 @@ C:\Users\Bladimir\Desktop\facturacion\facturacion\bin\Debug\facturacion.exe
 C:\Users\Bladimir\Desktop\facturacion\facturacion\bin\Debug\facturacion.pdb
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.csprojResolveAssemblyReference.cache
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.Properties.Resources.resources
-C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_cliente.resources
-C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_componentes.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_factura.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_inicio.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarCliente.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_listarMarca.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.frm_listarProducto.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_marca.resources
-C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_nuevoUsuario.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Frm_Producto.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.vista.Principal.resources
 C:\Users\Bladimir\Desktop\facturacion\facturacion\obj\Debug\facturacion.csproj.GenerateResource.Cache
@@ -142,3 +139,7 @@ C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\Fa
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.FrmUsuario.resources
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\bin\Debug\MySql.Data.dll
 C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_RegisraClente.resources
+C:\Users\Bladimir\Desktop\facturacion\Facturacion\obj\Debug\facturacion.vista.Frm_RegisraClente.resources
+C:\Users\Bladimir\Desktop\facturacion\Facturacion\obj\Debug\facturacion.vista.FrmUsuario.resources
+C:\Users\Bladimir\Desktop\facturacion\Facturacion\obj\Debug\facturacion.Frm_listarproveedor.resources
+C:\Users\Bladimir\Desktop\facturacion\Facturacion\obj\Debug\facturacion.Frm_registarproveedor.resources

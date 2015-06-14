@@ -60,6 +60,12 @@
     <Compile Include="controlador\PersonaDB.cs" />
     <Compile Include="controlador\ProveedorDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
+    <Compile Include="Frm_RegistroEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_RegistroEmpresa.Designer.cs">
+      <DependentUpon>Frm_RegistroEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="modelo\Cuenta.cs" />
     <Compile Include="modelo\detalleFactura.cs" />
     <Compile Include="modelo\Empresa.cs" />
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_RegistroEmpresa.resx">
+      <DependentUpon>Frm_RegistroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm RegisraClente.resx">
       <DependentUpon>Frm RegisraClente.cs</DependentUpon>
     </EmbeddedResource>
