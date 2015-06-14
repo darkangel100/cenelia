@@ -66,7 +66,12 @@ namespace facturacion.controlador
                 return false;
 
         }
-
+        public static int generarid(int nro)
+        {
+            int id = nro;
+            id++;
+            return id;
+        }
 
         public static void btnverificar(string txtcedula)
         {

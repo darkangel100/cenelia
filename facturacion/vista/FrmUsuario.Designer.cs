@@ -43,9 +43,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbp = new System.Windows.Forms.RadioButton();
             this.rba = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbBib = new System.Windows.Forms.RadioButton();
-            this.rbAdm = new System.Windows.Forms.RadioButton();
             this.txtcla = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txttel = new System.Windows.Forms.TextBox();
@@ -60,13 +57,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtced = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tc1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tp2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tc1
@@ -159,6 +157,7 @@
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // lstusu
             // 
@@ -182,8 +181,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txtcla);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txttel);
@@ -201,7 +201,7 @@
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(23, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 233);
+            this.panel1.Size = new System.Drawing.Size(459, 233);
             this.panel1.TabIndex = 51;
             // 
             // groupBox2
@@ -236,40 +236,6 @@
             this.rba.TabStop = true;
             this.rba.Text = "Activo";
             this.rba.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbBib);
-            this.groupBox1.Controls.Add(this.rbAdm);
-            this.groupBox1.Location = new System.Drawing.Point(224, 114);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(116, 57);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo";
-            // 
-            // rbBib
-            // 
-            this.rbBib.AutoSize = true;
-            this.rbBib.Checked = true;
-            this.rbBib.Location = new System.Drawing.Point(9, 34);
-            this.rbBib.Name = "rbBib";
-            this.rbBib.Size = new System.Drawing.Size(71, 17);
-            this.rbBib.TabIndex = 1;
-            this.rbBib.TabStop = true;
-            this.rbBib.Text = "Vendedor";
-            this.rbBib.UseVisualStyleBackColor = true;
-            // 
-            // rbAdm
-            // 
-            this.rbAdm.AutoSize = true;
-            this.rbAdm.Location = new System.Drawing.Point(9, 15);
-            this.rbAdm.Name = "rbAdm";
-            this.rbAdm.Size = new System.Drawing.Size(88, 17);
-            this.rbAdm.TabIndex = 0;
-            this.rbAdm.TabStop = true;
-            this.rbAdm.Text = "Administrador";
-            this.rbAdm.UseVisualStyleBackColor = true;
             // 
             // txtcla
             // 
@@ -365,6 +331,7 @@
             this.btnGuarda.TabIndex = 9;
             this.btnGuarda.Text = "&Guardar";
             this.btnGuarda.UseVisualStyleBackColor = true;
+            this.btnGuarda.Click += new System.EventHandler(this.btnGuarda_Click);
             // 
             // txtape
             // 
@@ -404,6 +371,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cédula:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(272, 143);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(107, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(216, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Rol:";
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,6 +399,7 @@
             this.Controls.Add(this.tc1);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.tc1.ResumeLayout(false);
             this.tp1.ResumeLayout(false);
             this.tp1.PerformLayout();
@@ -422,8 +409,6 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -445,9 +430,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbp;
         private System.Windows.Forms.RadioButton rba;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbBib;
-        private System.Windows.Forms.RadioButton rbAdm;
         private System.Windows.Forms.TextBox txtcla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txttel;
@@ -462,5 +444,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtced;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

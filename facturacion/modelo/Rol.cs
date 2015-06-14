@@ -9,6 +9,13 @@ namespace facturacion.modelo
     {
         private int id_rol;
         private string nombre;
+        private List<Rol> listaRol = new List<Rol>();
+
+        internal List<Rol> ListaRol
+        {
+            get { return listaRol; }
+            set { listaRol = value; }
+        }
 
         public int Id_rol
         {

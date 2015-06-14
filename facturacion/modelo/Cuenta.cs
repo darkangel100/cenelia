@@ -8,10 +8,24 @@ namespace facturacion.modelo
     class Cuenta
     {
         private int id_cuenta;
-        private string usuario;
-        private string clave;
+        private string usuario21;
+ private string clave;
         private Persona persona;
         private DateTime ultimoacceso;
+        private string estado = "Activo";
+        private List<Cuenta> listacuentas = new List<Cuenta>();
+
+        public string Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+        public string Usuario21
+        {
+            get { return usuario21; }
+            set { usuario21 = value; }
+        }
+       
 
         public DateTime Ultimoacceso
         {
@@ -30,11 +44,7 @@ namespace facturacion.modelo
             set { id_cuenta = value; }
         }
 
-        public string Usuario
-        {
-            get { return usuario; }
-            set { usuario = value; }
-        }
+        
 
         public string Clave
         {
@@ -44,7 +54,7 @@ namespace facturacion.modelo
         override
         public string ToString()
         {
-            return this.usuario;
+            return this.usuario21;
         }
 
 

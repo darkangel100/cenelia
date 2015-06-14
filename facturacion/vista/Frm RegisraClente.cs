@@ -17,8 +17,7 @@ namespace facturacion.vista
         {
             InitializeComponent();
         }
-        string estado = "";
-        int fila = -1;
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -47,7 +46,7 @@ namespace facturacion.vista
                 else
                 {
                     MessageBox.Show("Cliente Ingresado", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estado = "";
+                   // estado = "";
                 }
             }
             catch (Exception ex)
@@ -63,7 +62,7 @@ namespace facturacion.vista
             lec.getPersona().Direccion = txt_direccion. Text.Trim();
             lec.getPersona().Telefono = txt_telefono. Text.Trim();
             lec.getPersona().Estado = "A";
-            lec.getPersona().Rol = "Cliente";
+            //lec.getPersona().Rol = "Cliente";
             
             return lec;
         }

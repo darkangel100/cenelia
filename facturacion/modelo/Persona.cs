@@ -14,22 +14,36 @@ namespace facturacion.modelo
         private string telefono;
         private string direccion;
         private string estado = "activo";
-        private string rol;
-        private Cuenta cuenta;
+        private Rol rol;
+       private Usuario usuario;
+       private Cuenta cuenta;
         private Proveedor proveedor;
-         
+      public
+          Cuenta Cuenta
+       {
+           get { return cuenta; }
+           set { cuenta = value; }
+       }
+       
+        public Rol Rol
+        {
+            get { return rol; }
+            set { rol = value; }
+        }
 
-        internal Proveedor Proveedor
+        internal Usuario Usuario
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
+
+    public Proveedor Proveedor
         {
             get { return proveedor; }
             set { proveedor = value; }
         }
 
-        public string Rol
-        {
-            get { return Rol; }
-            set { Rol = value; }
-        }
+       
         public string Direccion
         {
             get { return direccion; }
