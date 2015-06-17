@@ -7,6 +7,7 @@ namespace facturacion.modelo
 {
     class Rol
     {
+
         private int id_rol;
         private string nombre;
         private List<Rol> listaRol = new List<Rol>();
@@ -17,6 +18,7 @@ namespace facturacion.modelo
             set { listaRol = value; }
         }
 
+        
         public int Id_rol
         {
             get { return id_rol; }
@@ -29,6 +31,7 @@ namespace facturacion.modelo
             get { return nombre; }
             set { nombre = value; }
         }
+       
         override
         public string ToString()
         {

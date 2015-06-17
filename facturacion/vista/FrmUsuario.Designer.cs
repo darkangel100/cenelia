@@ -40,6 +40,8 @@
             this.lstusu = new System.Windows.Forms.ListBox();
             this.tp2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbp = new System.Windows.Forms.RadioButton();
             this.rba = new System.Windows.Forms.RadioButton();
@@ -57,8 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtced = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tc1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,6 +76,7 @@
             this.tc1.SelectedIndex = 0;
             this.tc1.Size = new System.Drawing.Size(535, 336);
             this.tc1.TabIndex = 2;
+            this.tc1.SelectedIndexChanged += new System.EventHandler(this.tc1_SelectedIndexChanged);
             // 
             // tp1
             // 
@@ -91,8 +92,7 @@
             this.tp1.TabIndex = 0;
             this.tp1.Text = "Listado";
             this.tp1.UseVisualStyleBackColor = true;
-            this.tp1.Click += new System.EventHandler(this.tp1_Click);
-            // 
+             //
             // chkeliminados
             // 
             this.chkeliminados.AutoSize = true;
@@ -157,7 +157,7 @@
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            
             // 
             // lstusu
             // 
@@ -203,6 +203,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 233);
             this.panel1.TabIndex = 51;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(216, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Rol:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(272, 143);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(107, 21);
+            this.comboBox1.TabIndex = 23;
             // 
             // groupBox2
             // 
@@ -371,25 +390,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cédula:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(272, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(107, 21);
-            this.comboBox1.TabIndex = 23;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(216, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Rol:";
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +399,7 @@
             this.Controls.Add(this.tc1);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
-            this.Load += new System.EventHandler(this.FrmUsuario_Load);
+            
             this.tc1.ResumeLayout(false);
             this.tp1.ResumeLayout(false);
             this.tp1.PerformLayout();

@@ -5,12 +5,12 @@ using System.Text;
 
 namespace facturacion.modelo
 {
-    class Usuario:Persona
+    class Usuario
     {
         private string cla_usu;
         private Rol rol;
 
-        internal Rol Rol
+        public Rol Rol
         {
             get { return rol; }
             set { rol = value; }

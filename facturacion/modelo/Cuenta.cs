@@ -5,7 +5,7 @@ using System.Text;
 
 namespace facturacion.modelo
 {
-    class Cuenta
+    class Cuenta:Persona
     {
         private int id_cuenta;
         private string usuario21;
@@ -33,7 +33,7 @@ namespace facturacion.modelo
             set { ultimoacceso = value; }
         }
 
-        internal Persona Persona
+        public Persona Persona
         {
             get { return persona; }
             set { persona = value; }

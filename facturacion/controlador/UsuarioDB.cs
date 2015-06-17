@@ -15,24 +15,30 @@ namespace facturacion.controlador
         Conexion con = new Conexion();
         Persona per = null;
 
-        public Persona getPersona()
+
+
+        private Persona usuario = null;
+
+        public Persona getUsuario()
         {
-            if (this.per == null)
+            if (this.usuario == null)
             {
-                this.per = new Persona();
-                Persona usuario = new Persona();
-                //this.per.Usuario=usuario;
+                this.usuario = new Persona();
             }
-            return this.per;
+            return this.usuario;
         }
-        public void setPersona(Persona pers)
+        public void setUsuario(Persona usuario)
         {
-            this.per = pers;
+            this.usuario = usuario;
         }
-        public void limpiar()
-        {
-            this.per = null;
-        }
+
+
+
+
+
+
+
+       
         public int InsertaUsuario(Persona per)
         {
             MySqlCommand cmd;
@@ -40,8 +46,8 @@ namespace facturacion.controlador
             int resp;
             try
             {
-               // string sqlcad = "Insert Usuario Values ('" + per.Cedula + "','" + per. + "','" + per.nomper + "','" + per.dirper + "','" + per.telper + "','" + per.estper + "','" + per.Usuario.clausu + "','" + per.Usuario.tipusu + "')";
-                string sqlcad = "Insert persona Values ('" + per.Cedula + "','" + per.Nombre + "','" + per.Apellido + "','" + per.Direccion + "','" + per.Telefono + "','" + per.Estado + "','" + per.Rol + "')";
+               
+                string sqlcad = "Insert persona Values ('" + per.Cedula + "','" + per.Nombre + "','" + per.Apellido + "','" + per.Direccion + "','" + per.Telefono + "','" + per.Estado + "','" + per.Rol.Id_rol + "')";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -62,57 +68,57 @@ namespace facturacion.controlador
             per = null;
             return resp;
         }
-        public int ActualizaUsuario(Persona per)
+        //public int ActualizaUsuario(Persona per)
+        //{
+        //    MySqlCommand cmd;
+        //    MySqlConnection cn = con.GetConnection();
+        //    int resp;
+        //    try
+        //    {
+        //        string sqlcad = "Update Persona set cedula='" + per.Cedula + "',nom_per='" + per.Nombre + "',apellido_per='" + per.Apellido + "',direccion='" + per.Direccion + "',telefono='" + per.Telefono + "',estado='" + per.Estado + "',Rol_idRol='" + per.Rol.Id_rol+ "' WHERE ced_usu='" + per.Cedula + "'";
+        //        cmd = new MySqlCommand(sqlcad, cn);
+        //        cmd.CommandType = CommandType.Text;
+        //        cn.Open();
+        //        resp = cmd.ExecuteNonQuery();
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        resp = 0;
+        //        throw ex;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        resp = 0;
+        //        throw ex;
+        //    }
+        //    cn.Close();
+        //    cmd = null;
+        //    return resp;
+        //}
+        public List<Persona> TraeUsuarios()
         {
-            MySqlCommand cmd;
-            MySqlConnection cn = con.GetConnection();
-            int resp;
-            try
-            {
-                string sqlcad = "Update Usuario set cedula='" + per.Cedula + "',nom_per='" + per.Nombre + "',apellido_per='" + per.Apellido + "',direccion='" + per.Direccion + "',telefono='" + per.Telefono + "',cla_usu='" + per.Usuario.clausu + "',tip_usu='" + per.Usuario.Rol.Nombre + "' WHERE ced_usu='" + per.Cedula + "'";
-                cmd = new MySqlCommand(sqlcad, cn);
-                cmd.CommandType = CommandType.Text;
-                cn.Open();
-                resp = cmd.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                resp = 0;
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                resp = 0;
-                throw ex;
-            }
-            cn.Close();
-            cmd = null;
-            return resp;
-        }
-        public List<Persona> Traepersonas(string est)
-        {
-            UsuarioDB per = null;
+            PersonaDB per = null;
             List<Persona> ListaUsu = new List<Persona>();
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from Usuario where est_usu='" + est + "' order by ape_usu";
+                string sqlcad = "Select * from persona where rol_idrol=1 || rol_idrol=2 ";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    per = new UsuarioDB();
+                    per = new PersonaDB();
                     per.getPersona().Cedula = dr[0].ToString();
-                    per.getPersona().Apellido = dr[1].ToString();
-                    per.getPersona().Nombre= dr[2].ToString();
+                    per.getPersona().Nombre = dr[1].ToString();
+                    per.getPersona().Apellido= dr[2].ToString();
                     per.getPersona().Direccion = dr[3].ToString();
                     per.getPersona().Telefono= dr[4].ToString();
                     per.getPersona().Estado = dr[5].ToString();
-                    per.getPersona().Usuario.clausu = dr[6].ToString();
-                    per.getPersona().Usuario.Rol.Nombre = dr[7].ToString();
+                    per.getPersona().Cuenta.Usuario21= dr[6].ToString();
+                    per.getPersona().Cuenta.Rol.Nombre = dr[7].ToString();
 
                     per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
                     ListaUsu.Add(per.getPersona());
@@ -133,9 +139,9 @@ namespace facturacion.controlador
             cmd = null;
             return ListaUsu;
         }
-        public Persona Traepersona(string ced)
+        public Persona TraeUsuario(string ced)
         {
-            UsuarioDB per = null;
+            PersonaDB per = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
@@ -147,15 +153,15 @@ namespace facturacion.controlador
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    per = new UsuarioDB();
+                    per = new PersonaDB();
                     per.getPersona().Cedula = dr[0].ToString();
-                    per.getPersona().Apellido = dr[1].ToString();
-                    per.getPersona().Nombre= dr[2].ToString();
+                    per.getPersona().Nombre = dr[1].ToString();
+                    per.getPersona().Apellido= dr[2].ToString();
                     per.getPersona().Direccion = dr[3].ToString();
                     per.getPersona().Telefono= dr[4].ToString();
                     per.getPersona().Estado= dr[5].ToString();
-                    per.getPersona().Usuario.clausu = dr[6].ToString();
-                    per.getPersona().Usuario.Rol.Nombre = dr[7].ToString();
+                    per.getPersona().Cuenta.Clave = dr[6].ToString();
+                    per.getPersona().Cuenta.Rol.Nombre = dr[7].ToString();
                 }
                 dr.Close();
             }
@@ -173,32 +179,32 @@ namespace facturacion.controlador
             cmd = null;
             return per.getPersona();
         }
-        public int EliminaUsuario(string ced)
-        {
-            MySqlCommand cmd;
-            MySqlConnection cn = con.GetConnection();
-            int resp = 0;
-            try
-            {
-                string sqlcad = "Update Usuario set est_usu='P' WHERE ced_usu='" + ced + "'";
-                cmd = new MySqlCommand(sqlcad, cn);
-                cmd.CommandType = CommandType.Text;
-                cn.Open();
-                resp = cmd.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                resp = 0;
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                resp = 0;
-                throw ex;
-            }
-            cn.Close();
-            cmd = null;
-            return resp;
-        }
+        //public int EliminaUsuario(string ced)
+        //{
+        //    MySqlCommand cmd;
+        //    MySqlConnection cn = con.GetConnection();
+        //    int resp = 0;
+        //    try
+        //    {
+        //        string sqlcad = "Update Usuario set est_usu='P' WHERE ced_usu='" + ced + "'";
+        //        cmd = new MySqlCommand(sqlcad, cn);
+        //        cmd.CommandType = CommandType.Text;
+        //        cn.Open();
+        //        resp = cmd.ExecuteNonQuery();
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        resp = 0;
+        //        throw ex;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        resp = 0;
+        //        throw ex;
+        //    }
+        //    cn.Close();
+        //    cmd = null;
+        //    return resp;
+        //}
     }
 }

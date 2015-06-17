@@ -69,7 +69,7 @@ namespace facturacion.vista
 
                     CuentaDB objB = new CuentaDB();
                     objB.setCuenta(objB.Traecuenta(textBox1.Text));
-
+                    
                     if (objB.getCuenta().Usuario21.Equals(textBox1.Text) && objB.getCuenta().Clave.Equals(textBox2.Text))
                     {
 

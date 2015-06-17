@@ -70,6 +70,12 @@ namespace facturacion.vista
             pro.Show();
         }
 
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario usuario = new FrmUsuario();
+            usuario.Show();
+        }
+
         
 
         

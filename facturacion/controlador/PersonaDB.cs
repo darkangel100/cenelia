@@ -60,7 +60,7 @@ namespace facturacion.controlador
             per = null;
             return resp;
         }
-        public List<Persona> TraeClientes(string est)
+        public List<Persona> TraePersonas()
         {
            PersonaDB per = null;
             List<Persona> ListaCli = new List<Persona>();
@@ -68,7 +68,7 @@ namespace facturacion.controlador
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from cliente where est_per='" + est + "' order by ape_per";
+                string sqlcad = "Select * from  order by ape_per";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -102,7 +102,7 @@ namespace facturacion.controlador
             cmd = null;
             return ListaCli;
         }
-        public Persona TraeCliente(string ced)
+        public Persona TraePersona(string ced)
         {
           PersonaDB per = null;
             MySqlCommand cmd;
@@ -197,6 +197,7 @@ namespace facturacion.controlador
             return resp;
         }
 
+        
 
     }
 }

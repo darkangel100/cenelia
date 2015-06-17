@@ -15,11 +15,17 @@ namespace facturacion.modelo
         private string direccion;
         private string estado = "activo";
         private Rol rol;
-       private Usuario usuario;
+      
        private Cuenta cuenta;
         private Proveedor proveedor;
-      public
-          Cuenta Cuenta
+        private List<Persona> listaPersonas = new List<Persona>();
+
+        public List<Persona> ListaPersonas
+        {
+            get { return listaPersonas; }
+            set { listaPersonas = value; }
+        }
+      public    Cuenta Cuenta
        {
            get { return cuenta; }
            set { cuenta = value; }
@@ -31,12 +37,7 @@ namespace facturacion.modelo
             set { rol = value; }
         }
 
-        internal Usuario Usuario
-        {
-            get { return usuario; }
-            set { usuario = value; }
-        }
-
+        
     public Proveedor Proveedor
         {
             get { return proveedor; }

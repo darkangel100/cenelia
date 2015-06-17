@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using facturacion.modelo;
 using System.Data;
-using MySql.Data;
+
 namespace facturacion.controlador
 {
     class CuentaDB

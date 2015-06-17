@@ -10,7 +10,7 @@ namespace facturacion
     class Conexion
     {
 
-        String connectionString = "Database=facturacioncentronaturista;Data Source=localhost;User Id=root;Password=root";
+        String connectionString = "Database=facturacioncentronaturista;Data Source=localhost;User Id=root;Password=";
         public MySqlConnection GetConnection()
         {
             MySqlConnection objcon = new MySqlConnection(connectionString);
