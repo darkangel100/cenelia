@@ -115,42 +115,7 @@ namespace facturacion.controlador
             return ListaCat;
         }
         //Metodo para traer el id del Rol
-        public int traeId(string nom)
-        {
-            int num = 0;
-            RolDB r = null;
-            MySqlCommand cmd;
-            MySqlConnection cn = con.GetConnection();
-            try
-            {
-                string sqlrol = "Select * from rol where nombre='" + nom + "' AND est_rol= 'A'";
-                cmd = new MySqlCommand(sqlrol, cn);
-                cmd.CommandType = CommandType.Text;
-                cn.Open();
-                MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    r = new RolDB();
-                    num = Convert.ToInt32(dr["id_rol"]);
-                }
-
-                dr.Close();
-            }
-            catch (MySqlException ex)
-            {
-                num = 0;
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                num = 0;
-                throw ex;
-            }
-            cn.Close();
-            cmd = null;
-            return num;
-
-        }
+       
 
     }
 }

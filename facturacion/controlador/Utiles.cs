@@ -73,7 +73,7 @@ namespace facturacion.controlador
             return id;
         }
 
-        public static void btnverificar(string txtcedula)
+        public static void verificar(string txtcedula)
         {
             int numero = 0;
             int digito = 0;
@@ -114,7 +114,7 @@ namespace facturacion.controlador
         }  /**
         // *Para validar numeros 
         //*/
-        public static void validacedula(TextBox tex1, KeyPressEventArgs e, TextBox tex2)
+        public static void validacedula(TextBox tex1, KeyPressEventArgs e)
         {
             char letra = e.KeyChar;
 
@@ -124,7 +124,7 @@ namespace facturacion.controlador
             }
             if (letra == 13)
             {
-                btnverificar(tex1.Text);
+                verificar(tex1.Text);
                 //tex2.Focus();
             }
         }
@@ -208,7 +208,6 @@ namespace facturacion.controlador
             
 
         }
-
         public static void limpiar(Control.ControlCollection cont)
         {
             foreach (Control c in cont)
@@ -217,6 +216,60 @@ namespace facturacion.controlador
                     c.Text = "";
             }
         }
-       
+      
+        public bool cedula(string ced)
+        {
+            bool ci = false;
+            if (ced.Length == 10)
+            {
+
+                string car = "";
+                int num = 0;
+                int suma = 0;
+                for (int cont = 0; cont < 9; cont++)
+                {
+                    car = Convert.ToString(ced[cont]);
+                    num = Convert.ToInt32(car);
+                    if (cont % 2 == 0)
+                    {
+                        num = num * 2;
+                        if (num > 9)
+                        {
+                            num = num - 9;
+                        }
+                    }
+                    suma = suma + num;
+                }
+                int ds = suma;
+                bool de = false;
+                while (de == false)
+                {
+                    if (ds % 10 == 0)
+                    {
+                        de = true;
+                    }
+                    else
+                    {
+                        ds = ds + 1;
+                    }
+                }
+                ds = ds - suma;
+                car = Convert.ToString(ced[9]);
+                num = Convert.ToInt32(car);
+                if (num == ds)
+                {
+                    ci = true;
+                    return ci;
+                }
+                else
+                {
+                    ci = false;
+                    return ci;
+                }
+
+            }
+            return ci;
+
+        }
     }
 }

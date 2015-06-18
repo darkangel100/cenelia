@@ -14,6 +14,13 @@ namespace facturacion.modelo
         private string telefono;
         private string direccion;
         private string estado = "activo";
+        private int id_rol;
+
+        public int Id_rol
+        {
+            get { return id_rol; }
+            set { id_rol = value; }
+        }
         private Rol rol;
       
        private Cuenta cuenta;

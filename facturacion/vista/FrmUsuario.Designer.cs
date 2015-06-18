@@ -59,6 +59,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtced = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.tc1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -92,7 +94,7 @@
             this.tp1.TabIndex = 0;
             this.tp1.Text = "Listado";
             this.tp1.UseVisualStyleBackColor = true;
-             //
+            // 
             // chkeliminados
             // 
             this.chkeliminados.AutoSize = true;
@@ -157,7 +159,7 @@
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
-            
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // lstusu
             // 
@@ -181,6 +183,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtusuario);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.groupBox2);
@@ -379,6 +383,7 @@
             this.txtced.Name = "txtced";
             this.txtced.Size = new System.Drawing.Size(128, 20);
             this.txtced.TabIndex = 3;
+            this.txtced.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtced_KeyPress);
             // 
             // label2
             // 
@@ -390,6 +395,26 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cédula:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(216, 121);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Usuario:";
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtusuario.Location = new System.Drawing.Point(272, 117);
+            this.txtusuario.MaxLength = 40;
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.PasswordChar = '*';
+            this.txtusuario.Size = new System.Drawing.Size(101, 20);
+            this.txtusuario.TabIndex = 26;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +424,7 @@
             this.Controls.Add(this.tc1);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
-            
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.tc1.ResumeLayout(false);
             this.tp1.ResumeLayout(false);
             this.tp1.PerformLayout();
@@ -446,5 +471,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtusuario;
+        private System.Windows.Forms.Label label9;
     }
 }

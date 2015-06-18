@@ -77,8 +77,11 @@ namespace facturacion.controlador
             MySqlConnection cnn = con.GetConnection();
             try
             {
-                string sqlcuenta = "Insert cuenta values(" + cuen.Id_cuenta + "," + cuen.Usuario21 + ",'" + cuen.Clave + "','" + cuen.Estado + "','" + cuen.Persona.Id_persona + "','" + cuen.Ultimoacceso + "')";
-                cmd = new MySqlCommand(sqlcuenta, cnn);
+            //    string sqlcuenta = "Insert cuenta values(" + cuen.Usuario21 + ",'" + cuen.Clave + "','" + cuen.Id_per + "','" + cuen.Ultimoacceso + "')";
+               // string sqlcad = "Insert cuenta Values (" + cuen.Usuario21 + "','" + cuen.Clave + "','" + cuen.Id_per + "')";
+                string comandoSql = "Insert cuenta set usuario='" + cuen.Usuario21 + "', clave='" + cuen.Clave + "', persona_idpersona='" +cuen.Id_per + "'";
+
+                cmd = new MySqlCommand(comandoSql, cnn);
                 cmd.CommandType = CommandType.Text;
                 cnn.Open();
                 resp = cmd.ExecuteNonQuery();
@@ -98,5 +101,6 @@ namespace facturacion.controlador
             return resp;
 
         }
+       
     }
 }

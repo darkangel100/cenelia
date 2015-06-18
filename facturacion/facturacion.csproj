@@ -79,6 +79,7 @@
     <Compile Include="modelo\Produccto.cs" />
     <Compile Include="modelo\Proveedor.cs" />
     <Compile Include="modelo\Rol.cs" />
+    <Compile Include="modelo\Usuario.cs" />
     <Compile Include="vista\Frm RegisraClente.cs">
       <SubType>Form</SubType>
     </Compile>

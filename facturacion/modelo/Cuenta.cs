@@ -14,6 +14,13 @@ namespace facturacion.modelo
         private DateTime ultimoacceso;
         private string estado = "Activo";
         private List<Cuenta> listacuentas = new List<Cuenta>();
+        private int id_per;
+
+        public int Id_per
+        {
+            get { return id_per; }
+            set { id_per = value; }
+        }
 
         public string Estado
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace facturacion.modelo
 {
-    class Usuario
+    class Usuario:Persona
     {
         private string cla_usu;
         private Rol rol;

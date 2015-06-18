@@ -18,114 +18,84 @@ namespace facturacion.vista
         }
         string estado = "";
         int indice = 0;
-        //private void tp1_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnNuevo_Click(object sender, EventArgs e)
-        //{
-        //    estado = "N";
-        //    panel1.Enabled = true;
-        //    Utiles.limpiar(tc1.Controls);
-        //    indice = 1;
-        //    tc1.SelectTab(indice);
-        //    txtced.Enabled = true;
-        //    txtced.Focus();
-        //}
-
-        //private void FrmUsuario_Load(object sender, EventArgs e)
-        //{
-        //    llenaRol(comboBox1);
-        //    llenaUsuarioLista();
-           
-        //}
-
-        //private void llenaRol(ComboBox cbo)
-        //{
-        //    try
-        //    {
-        //        RolDB objC = new RolDB();
-        //        objC.getRol().ListaRol = objC.TraeRol();
-        //        if (objC.getRol().ListaRol.Count == 0)
-        //        {
-        //            MessageBox.Show("No existen de Usuarios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //        }
-        //    comboBox1. DisplayMember = "nombre";
-        //  comboBox1. ValueMember = "idrol";
-        //        cbo.DataSource = objC.getRol().ListaRol;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
-        //private void llenar()
-        //{
-
-        //    try
-        //    {
-        //PersonaDB objusu = new PersonaDB();
-        //        int resp;
-        //        int resc;
-        //        llenaUsuario(objusu);
-        //        resp = objusu.InsertaCliente(objusu.getPersona());
-        //     CuentaDB objc = new CuentaDB();
-        //        llenacamcuen(objc);
-        //        resc = objc.ingresacuenta(objc.getCuenta());
-
-        //        if (resp == 0)
-        //        {
-        //            MessageBox.Show("No se ingresaron datos del Usuario", "USUARIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Usuario ingresado correctamente","USUARIO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //           // estado = "";
-        //           // LimpiarCampos();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al Ingresar datos," + ex.Message, "USUARIO", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-        //    }
-        //}
-        //private PersonaDB llenaUsuario(PersonaDB per)
-        //{
-        //    RolDB r = new RolDB();
-        //    UsuarioDB U = new UsuarioDB();
-        //    per.getPersona().Cedula = txtced .Text.Trim();
-        //    per.getPersona().Apellido = txtape. Text.Trim();
-        //    per.getPersona().Nombre= txtnom. Text.Trim();
-        //    per.getPersona().Direccion =txtdir .Text.Trim();
-        //    per.getPersona().Telefono =txttel. Text.Trim();
-
-        //    if (rba. Checked == true)
-        //        per.getPersona().Estado = "A";
-        //    else
-        //        per.getPersona().Estado = "D";
-            
-        //    per.getPersona().Usuario.clausu= txtcla.Text.Trim();
-        //    per.getPersona().Id_persona = r. traeId(comboBox1.SelectedValue.ToString());
-
-        //    return per;
-        //}
-        //private CuentaDB llenacamcuen(CuentaDB cuen)
-        //{
-
-        //    cuen.getCuenta().Clave = txtcla.Text.Trim();
-        //    cuen.getCuenta().Usuario21 = txtnom.Text.Trim();
-        //    if (rba.Checked == true)
-        //        cuen.getCuenta().Estado = "A";
-        //    else
-        //        cuen.getCuenta().Estado = "D";
-        //    return cuen;
-        //}
-
+     
+        Utiles util = new Utiles();
         private void btnGuarda_Click(object sender, EventArgs e)
         {
-            //llenar();
+            PersonaDB objp = new PersonaDB();
+            
+            num = objp.traenumero();
+            if (num.Equals(""))
+            {
+                id_persona = 1;
+            }
+            else
+            {
+                id_persona = Convert.ToInt32(num);
+                id_persona++;
+            }
+            if (estado == "N")
+            {
+              
+
+               Adiciona();
+                    Utiles.limpiar(tc1.Controls);
+                
+            }
+            if (estado == "E")
+            {
+                //editar();
+            }
+        }
+        private void Adiciona()
+        {
+            try
+            {
+
+               PersonaDB objU = new PersonaDB();
+                RolDB rol=new  RolDB();
+                CuentaDB objC = new CuentaDB();
+                int resp;
+                objU.getPersona().Cedula = txtced.Text.Trim();
+                objU.getPersona().Nombre = txtnom.Text.Trim();
+                objU.getPersona().Apellido = txtape. Text.Trim();
+                objU.getPersona().Direccion = txtdir. Text.Trim();
+                objU.getPersona().Telefono = txttel. Text.Trim();
+              //  objU.getPersona().Estado = "Activo";
+               
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    objU.getPersona().Id_rol= objU.traeId("vendedor");
+
+                }
+                else
+                {
+                    objU.getPersona().Id_rol = objU.traeId("administrador");
+
+                }
+
+                objC.getCuenta().Usuario21 = txtusuario.Text.Trim();
+                objC.getCuenta().Clave =txtcla. Text.Trim();
+                objC.getCuenta().Id_per= id_persona;
+                resp = objU.InsertaCliente(objU.getPersona());
+                resp = objC.ingresacuenta(objC.getCuenta());
+                if (resp == 0)
+                {
+                    MessageBox.Show("No se ingreso datos de Usuario", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario Ingresado", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 
+                    estado = "";
+                   llenausuario();
+                   Utiles.limpiar(tc1.Controls);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Ingresar Datos," + ex.Message, "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void cargarol(string est)
         {
@@ -154,6 +124,69 @@ namespace facturacion.vista
         {
             tc1.SelectTab(indice);
         }
-        
+        string num;
+        int id_persona;
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            
+            llenaRol(comboBox1);
+            llenausuario();
+
+        }
+        public void llenausuario()
+        {
+            try
+            {
+               UsuarioDB objU = new UsuarioDB();
+               objU.getUsuario().ListaPersonas = objU.Traeusuarios(); ;
+                if (objU.getUsuario().ListaPersonas.Count == 0)
+                {
+                    MessageBox.Show("No existen registros de usuarios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+              lstusu. DisplayMember = "nombre"; // esta relacionado a los nombres
+              lstusu.ValueMember = "cedula"; // el id que esta relacionado con el usuario
+              lstusu.DataSource = objU.getUsuario().ListaPersonas; // el contenido de la lista 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "VENTAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            estado = "N";
+            panel1.Enabled = true;
+            Utiles.limpiar(tc1.Controls);
+            indice = 1;
+            tc1.SelectTab(indice);
+            txtced.Enabled = true;
+            txtced.Focus();
+        }
+        private void llenaRol(ComboBox cbo)
+        {
+            try
+            {
+                RolDB objC = new RolDB();
+                objC.getRol().ListaRol = objC.TraeRol();
+                if (objC.getRol().ListaRol.Count == 0)
+                {
+                    MessageBox.Show("No existen de Usuarios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                comboBox1.DisplayMember = "nombre";
+                comboBox1.ValueMember = "idrol";
+                cbo.DataSource = objC.getRol().ListaRol;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtced_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            Utiles.validacedula(txtced, e);
+        }
     }
 }
