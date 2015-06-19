@@ -98,6 +98,12 @@
     <Compile Include="vista\Frm_listarproveedor.Designer.cs">
       <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\Frm_Lotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_Lotes.Designer.cs">
+      <DependentUpon>Frm_Lotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Frm_registarproveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_listarproveedor.resx">
       <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Frm_Lotes.resx">
+      <DependentUpon>Frm_Lotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_registarproveedor.resx">
       <DependentUpon>Frm_registarproveedor.cs</DependentUpon>

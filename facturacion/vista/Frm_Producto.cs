@@ -88,5 +88,12 @@ namespace facturacion.vista
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_Lotes lote = new Frm_Lotes();
+            lote.Show();
+
+        }
     }
 }
