@@ -23,28 +23,16 @@ namespace facturacion.vista
             InitializeComponent();
         }
 
-        private void btnmin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void Frmprincipal_Load(object sender, EventArgs e)
-        {
-            lblfecha.Text = DateTime.Now.ToShortDateString();
-            //lbluser.Text = "Usuario: " + Program.usuario;
-            lblhora.Text = DateTime.Now.ToLongTimeString();
-        }
+       
 
        
 
-        private void administraciònToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Principal_Load(object sender, EventArgs e)
         {
-
+             lblfecha.Text = DateTime.Now.ToShortDateString();
+            //lbluser.Text = "Usuario: " + Program.usuario;
+            lblhora.Text = DateTime.Now.ToLongTimeString();
+        
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -74,6 +62,11 @@ namespace facturacion.vista
         {
             FrmUsuario usuario = new FrmUsuario();
             usuario.Show();
+        }
+
+        private void btnmin_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
         

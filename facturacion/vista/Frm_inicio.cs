@@ -26,20 +26,7 @@ namespace facturacion.vista
         
         
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-            //Centrar el Panel
-            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor
-            Int32 alto = (desktopSize.Height - 280) / 2;
-            Int32 ancho = (desktopSize.Width - 500) / 2;
-            panel1.Location = new Point(ancho, alto);
-            //Fin central el Panel
-
-            //Mostrar Fecha y Hora
-            lblFecha.Text = DateTime.Now.ToLongDateString();
-            lblHora.Text = DateTime.Now.ToLongTimeString();
-        }
-
+      
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             verificar();
@@ -68,7 +55,7 @@ namespace facturacion.vista
                 {
 
                     CuentaDB objB = new CuentaDB();
-                    objB.setCuenta(objB.Traecuenta(textBox1.Text));
+                    objB.setCuenta(objB.TraeContra(textBox1.Text));
                     
                     if (objB.getCuenta().Usuario21.Equals(textBox1.Text) && objB.getCuenta().Clave.Equals(textBox2.Text))
                     {
@@ -95,5 +82,20 @@ namespace facturacion.vista
             }
         }
 
+        private void Frm_inicio_Load(object sender, EventArgs e)
+        {
+            //Centrar el Panel
+            //Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor
+            //Int32 alto = (desktopSize.Height - 280) / 2;
+            //Int32 ancho = (desktopSize.Width - 500) / 2;
+            //panel1.Location = new Point(ancho, alto);
+            //Fin central el Panel
+
+            //Mostrar Fecha y Hora
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        
     }
 }

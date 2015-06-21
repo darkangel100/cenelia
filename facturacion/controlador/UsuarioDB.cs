@@ -49,6 +49,7 @@ namespace facturacion.controlador
                 while (dr.Read())//permite leer los datos
                 {
                     usu = new Persona();//crea los usuarios importante
+                    usu.Id_persona = int.Parse(dr["idPersona"].ToString());
                     usu.Cedula = dr["cedula"].ToString() ;//nombre de las tablas
                     usu.Nombre = dr["nombre_per"].ToString();
                     usu.Apellido = dr["apellido_per"].ToString();

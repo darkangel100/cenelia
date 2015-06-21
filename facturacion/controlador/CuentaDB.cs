@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 using facturacion.modelo;
 using System.Data;
 
+
 namespace facturacion.controlador
 {
     class CuentaDB
@@ -32,7 +33,42 @@ namespace facturacion.controlador
             return c;
         }
 
+        public Cuenta TraeContra(string ced)
+        {
+            CuentaDB per = null;
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+                string sqlcad = "Select * from cuenta Where usuario='" + ced + "'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    per = new CuentaDB();
+                    per.getCuenta().Usuario21 = dr[1].ToString();
+                    per.getCuenta().Clave = dr[2].ToString();
 
+
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                per = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                per = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return per.getCuenta();
+        }
        
         public Cuenta Traecuenta(string ced)
         {
@@ -41,7 +77,7 @@ namespace facturacion.controlador
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from cuenta Where usuario='" +ced+"'";
+                string sqlcad = "Select * from cuenta Where Persona_idPersona='" +ced+"'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -77,9 +113,8 @@ namespace facturacion.controlador
             MySqlConnection cnn = con.GetConnection();
             try
             {
-            //    string sqlcuenta = "Insert cuenta values(" + cuen.Usuario21 + ",'" + cuen.Clave + "','" + cuen.Id_per + "','" + cuen.Ultimoacceso + "')";
-               // string sqlcad = "Insert cuenta Values (" + cuen.Usuario21 + "','" + cuen.Clave + "','" + cuen.Id_per + "')";
-                string comandoSql = "Insert cuenta set usuario='" + cuen.Usuario21 + "', clave='" + cuen.Clave + "', persona_idpersona='" +cuen.Id_per + "'";
+            //   
+                string comandoSql = "Insert cuenta set usuario='" + cuen.Usuario21 + "', clave='" + cuen.Clave + "', persona_idpersona='" + cuen.Id_per + "'";
 
                 cmd = new MySqlCommand(comandoSql, cnn);
                 cmd.CommandType = CommandType.Text;
@@ -101,6 +136,65 @@ namespace facturacion.controlador
             return resp;
 
         }
-       
+        public int llenacuenta(Cuenta cuen)
+        {
+
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            int resp;
+            try
+            {
+                string sqlcad = "Insert cuenta set usuario='" + cuen.Usuario21 + "', clave='" + cuen.Clave + "', persona_idpersona='" + cuen.Id_per + "'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cn.Open();
+                resp = cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return resp;
+        }
+        public int ActualizaCuenta(Cuenta cuen)
+        {
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            int resp;
+            try
+            {
+
+                string sqlcad = "Update cuenta set usuario='" + cuen.Usuario21 + "',clave='" + cuen.Clave + "',estado='"+ cuen.Estado+ "' WHERE Persona_idPersona='" + cuen.Id_per + "'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                resp = cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return resp;
+        }
+        public void traeidperCuenta(Cuenta cuent)
+        {
+
+        }
+        
     }
 }

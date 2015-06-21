@@ -111,6 +111,7 @@
             this.btnmin.TabIndex = 1;
             this.btnmin.Text = "--";
             this.btnmin.UseVisualStyleBackColor = false;
+            this.btnmin.Click += new System.EventHandler(this.btnmin_Click_1);
             // 
             // btncerrar
             // 
@@ -180,7 +181,6 @@
             this.administraciònToolStripMenuItem.Name = "administraciònToolStripMenuItem";
             this.administraciònToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administraciònToolStripMenuItem.Text = "Administra Productos";
-            this.administraciònToolStripMenuItem.Click += new System.EventHandler(this.administraciònToolStripMenuItem_Click);
             // 
             // administrarProductoToolStripMenuItem
             // 

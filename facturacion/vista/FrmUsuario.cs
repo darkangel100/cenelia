@@ -23,29 +23,35 @@ namespace facturacion.vista
         private void btnGuarda_Click(object sender, EventArgs e)
         {
             PersonaDB objp = new PersonaDB();
-            
-            num = objp.traenumero();
-            if (num.Equals(""))
+            if (estado == "N")
             {
-                id_persona = 1;
-            }
-            else
-            {
-                id_persona = Convert.ToInt32(num);
-                id_persona++;
+                num = objp.traenumero();
+                if (num.Equals(""))
+                {
+                    id_persona = 1;
+                }
+                else
+                {
+                    id_persona = Convert.ToInt32(num);
+                    id_persona++;
+                }
             }
             if (estado == "N")
             {
               
 
                Adiciona();
-                    Utiles.limpiar(tc1.Controls);
+                  
                 
             }
             if (estado == "E")
             {
-                //editar();
+                editar();
             }
+            Utiles.limpiar(panel1.Controls);
+            indice = 0;
+            tc1.SelectTab(indice);
+
         }
         private void Adiciona()
         {
@@ -56,13 +62,12 @@ namespace facturacion.vista
                 RolDB rol=new  RolDB();
                 CuentaDB objC = new CuentaDB();
                 int resp;
+                int resp2;
                 objU.getPersona().Cedula = txtced.Text.Trim();
                 objU.getPersona().Nombre = txtnom.Text.Trim();
                 objU.getPersona().Apellido = txtape. Text.Trim();
                 objU.getPersona().Direccion = txtdir. Text.Trim();
                 objU.getPersona().Telefono = txttel. Text.Trim();
-              //  objU.getPersona().Estado = "Activo";
-               
                 if (comboBox1.SelectedIndex == 0)
                 {
                     objU.getPersona().Id_rol= objU.traeId("vendedor");
@@ -78,12 +83,12 @@ namespace facturacion.vista
                 objC.getCuenta().Clave =txtcla. Text.Trim();
                 objC.getCuenta().Id_per= id_persona;
                 resp = objU.InsertaCliente(objU.getPersona());
-                resp = objC.ingresacuenta(objC.getCuenta());
-                if (resp == 0)
+                resp2 = objC.ingresacuenta(objC.getCuenta());
+                if (resp == 0||resp2==0)
                 {
                     MessageBox.Show("No se ingreso datos de Usuario", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else
+              if(resp==1&&resp2==1)
                 {
                     MessageBox.Show("Usuario Ingresado", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  
@@ -144,7 +149,7 @@ namespace facturacion.vista
                     MessageBox.Show("No existen registros de usuarios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
               lstusu. DisplayMember = "nombre"; // esta relacionado a los nombres
-              lstusu.ValueMember = "cedula"; // el id que esta relacionado con el usuario
+              lstusu.ValueMember = "Id_persona"; // el id que esta relacionado con el usuario
               lstusu.DataSource = objU.getUsuario().ListaPersonas; // el contenido de la lista 
             }
             catch (Exception ex)
@@ -186,7 +191,131 @@ namespace facturacion.vista
         private void txtced_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            Utiles.validacedula(txtced, e);
+          //  Utiles.validacedula(txtced, e);
+        }
+        private void editar()
+        {
+            try
+            {////////////////////////////////////////////////////////
+                PersonaDB objB = new PersonaDB();
+                CuentaDB objC = new CuentaDB();
+                int resp;
+                int resp1=0;
+                objB.getPersona().Cedula = txtced.Text;
+                objC.getCuenta().Id_persona =int.Parse( lstusu.SelectedValue.ToString());
+                llenapersona(objB);
+                llenacuenta(objC);
+                resp = objB.ActualizaCliente(objB.getPersona());
+                resp1 = objC.ActualizaCuenta(objC.getCuenta());
+
+                if ((resp == 0)||(resp1==0))
+                {
+                    MessageBox.Show("No se modifico datos del Usuario", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+             if(resp==1&&resp1==1)
+                {
+                    MessageBox.Show("Usuario Modificado", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    estado = "";
+                    llenausuario();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Ingresar Datos," + ex.Message, "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEdita_Click(object sender, EventArgs e)
+        {
+            modificar();
+        }
+        
+        private void modificar()
+        {
+            try
+            {
+                PersonaDB objB = new PersonaDB();
+                CuentaDB objC = new CuentaDB();
+                objB.setPersona(objB.TraePersona(int.Parse( lstusu.SelectedValue.ToString())));
+                objC.setCuenta(objC.Traecuenta((lstusu.SelectedValue.ToString())));
+                if (objB.getPersona().Cedula == "")
+                {
+                    MessageBox.Show("No existe registro del Usuario", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    txtced.Text = objB.getPersona().Cedula;
+                    txtape.Text = objB.getPersona().Apellido;
+                    txtnom.Text = objB.getPersona().Nombre;
+                    txtdir.Text = objB.getPersona().Direccion;
+                    txttel.Text = objB.getPersona().Telefono;
+                    if (objB.getPersona().Estado.Equals("Activo"))
+                        rba.Checked = true;
+                    else
+                        rbp.Checked = true;
+                    txtcla.Text = objC.getCuenta().Clave;
+                    txtusuario.Text = objC.getCuenta().Usuario21;
+                    btnGuarda.Enabled = true;
+                    txtced.Enabled = false;
+                    estado = "E";
+                    panel1.Enabled = true;
+                    indice = 1;
+                    tc1.SelectTab(indice);
+                    txtape.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al presentar los datos," + ex.Message, "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private PersonaDB llenapersona(PersonaDB usu)
+        {
+           
+           usu.getPersona().Cedula = txtced.Text.Trim();
+            usu.getPersona().Nombre = txtnom.Text.Trim();
+            usu.getPersona().Apellido = txtape.Text.Trim();
+            usu.getPersona().Direccion = txtdir.Text.Trim();
+            usu.getPersona().Telefono = txttel.Text.Trim();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                usu.getPersona().Id_rol = usu.traeId("vendedor");
+
+            }
+            else
+            {
+                usu.getPersona().Id_rol = usu.traeId("administrador");
+
+            }
+
+            return usu;
+        }
+        private CuentaDB llenacuenta(CuentaDB cuen)
+        {
+            PersonaDB objp = new PersonaDB();
+            cuen.getCuenta().Usuario21 = txtusuario.Text.Trim();
+           cuen.getCuenta().Clave = txtcla.Text.Trim();
+           cuen.getCuenta().Id_per =int.Parse(lstusu.SelectedValue.ToString());
+            return cuen;
+        }
+
+        private void btnEdita_Click_1(object sender, EventArgs e)
+        {
+            modificar();
+        }
+
+        private void btnSal_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            estado = "";
+            Utiles .limpiar(tc1.Controls);
+            panel1.Enabled = false;
+            indice = 0;
+            tc1.SelectTab(indice);
         }
     }
 }

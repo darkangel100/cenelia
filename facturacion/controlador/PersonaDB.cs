@@ -39,7 +39,6 @@ namespace facturacion.controlador
             int resp;
             try
             {
-                //string sqlcad = "Insert persona Values ('" + per.Cedula + "','" + per.Nombre + "','" + per.Apellido + "','" + per.Direccion + "','" + per.Telefono + "','"+per.Estado +  "','"    + per.Id_rol + "')";
                 string comandoSql = "Insert persona set cedula='" + per.Cedula + "', nombre_per='" +per.Nombre + "', apellido_per='" + per.Apellido + "', direccion='" + per.Direccion +"',telefono='"+per.Telefono+"',Rol_idrol='"+per.Id_rol+ "'";
                 cmd = new MySqlCommand(comandoSql, cn);
                 cmd.CommandType = CommandType.Text;
@@ -77,12 +76,13 @@ namespace facturacion.controlador
                 while (dr.Read())
                 {
                     per = new PersonaDB();
-                    per.getPersona().Cedula = dr[0].ToString();
-                    per.getPersona().Apellido = dr[1].ToString();
-                    per.getPersona().Nombre= dr[2].ToString();
-                    per.getPersona().Direccion = dr[3].ToString();
-                    per.getPersona().Telefono= dr[4].ToString();
-                    per.getPersona().Estado= dr[5].ToString();
+                    per.getPersona().Id_persona=int.Parse( dr[0].ToString());
+                    per.getPersona().Cedula = dr[1].ToString();
+                    per.getPersona().Apellido = dr[2].ToString();
+                    per.getPersona().Nombre= dr[3].ToString();
+                    per.getPersona().Direccion = dr[4].ToString();
+                    per.getPersona().Telefono= dr[5].ToString();
+                    per.getPersona().Estado= dr[6].ToString();
 
                     per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
                     ListaCli.Add(per.getPersona());
@@ -103,14 +103,14 @@ namespace facturacion.controlador
             cmd = null;
             return ListaCli;
         }
-        public Persona TraePersona(string ced)
+        public Persona TraePersona(int ced)
         {
           PersonaDB per = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from persona Where ced_per='" + ced + "'";
+                string sqlcad = "Select * from persona Where idPersona='" + ced + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -118,12 +118,13 @@ namespace facturacion.controlador
                 while (dr.Read())
                 {
                     per = new PersonaDB();
-                    per.getPersona().Cedula = dr[0].ToString();
-                    per.getPersona().Apellido = dr[1].ToString();
-                    per.getPersona().Nombre= dr[2].ToString();
-                    per.getPersona().Direccion = dr[3].ToString();
-                    per.getPersona().Telefono = dr[4].ToString();
-                    per.getPersona().Estado = dr[5].ToString();
+                    per.getPersona().Id_persona = int.Parse( dr[0].ToString());
+                    per.getPersona().Cedula = dr[1].ToString();
+                    per.getPersona().Apellido = dr[2].ToString();
+                    per.getPersona().Nombre= dr[3].ToString();
+                    per.getPersona().Direccion = dr[4].ToString();
+                    per.getPersona().Telefono = dr[5].ToString();
+                    per.getPersona().Estado = dr[6].ToString();
                 }
                 dr.Close();
             }
@@ -150,7 +151,7 @@ namespace facturacion.controlador
             try
             {
 
-                string sqlcad = "Update persona set ape_per='" + per.Apellido + "',nom_per='" + per.Nombre + "',dir_per='" + per.Direccion + "',tel_per='" + per.Telefono + "',est_per='" + per.Estado + "' WHERE ced_per='" + per.Cedula + "'";
+                string sqlcad = "Update persona set nombre_per='" + per.Nombre + "',apellido_per='" + per.Apellido + "',direccion='" + per.Direccion + "',telefono='" + per.Telefono + "' WHERE cedula='" + per.Cedula + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -244,8 +245,6 @@ namespace facturacion.controlador
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    //  r = new RolDB();
-
                     num = Convert.ToInt32(dr["idrol"]);
                 }
 

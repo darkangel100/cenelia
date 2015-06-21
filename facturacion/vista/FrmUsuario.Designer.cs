@@ -40,6 +40,8 @@
             this.lstusu = new System.Windows.Forms.ListBox();
             this.tp2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,8 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtced = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtusuario = new System.Windows.Forms.TextBox();
             this.tc1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -122,6 +122,7 @@
             this.btnSal.TabIndex = 55;
             this.btnSal.Text = "&Salir";
             this.btnSal.UseVisualStyleBackColor = true;
+            this.btnSal.Click += new System.EventHandler(this.btnSal_Click);
             // 
             // panel2
             // 
@@ -150,6 +151,7 @@
             this.btnEdita.TabIndex = 8;
             this.btnEdita.Text = "&Modificar";
             this.btnEdita.UseVisualStyleBackColor = true;
+            this.btnEdita.Click += new System.EventHandler(this.btnEdita_Click_1);
             // 
             // btnNuevo
             // 
@@ -207,6 +209,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 233);
             this.panel1.TabIndex = 51;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Location = new System.Drawing.Point(272, 117);
+            this.txtusuario.MaxLength = 40;
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.PasswordChar = '*';
+            this.txtusuario.Size = new System.Drawing.Size(101, 20);
+            this.txtusuario.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(216, 121);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Usuario:";
             // 
             // label7
             // 
@@ -345,6 +366,7 @@
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuarda
             // 
@@ -394,26 +416,6 @@
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cédula:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(216, 121);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Usuario:";
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtusuario.Location = new System.Drawing.Point(272, 117);
-            this.txtusuario.MaxLength = 40;
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.PasswordChar = '*';
-            this.txtusuario.Size = new System.Drawing.Size(101, 20);
-            this.txtusuario.TabIndex = 26;
             // 
             // FrmUsuario
             // 
