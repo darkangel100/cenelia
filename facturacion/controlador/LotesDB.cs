@@ -7,5 +7,6 @@ namespace facturacion.controlador
 {
     class LotesDB
     {
+
     }
 }

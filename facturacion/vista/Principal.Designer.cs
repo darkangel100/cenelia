@@ -42,10 +42,6 @@
             this.administrarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarLotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciònToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,9 +171,7 @@
             // administraciònToolStripMenuItem
             // 
             this.administraciònToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarProductoToolStripMenuItem,
-            this.administrarMarcasToolStripMenuItem,
-            this.administrarLotesToolStripMenuItem});
+            this.administrarProductoToolStripMenuItem});
             this.administraciònToolStripMenuItem.Name = "administraciònToolStripMenuItem";
             this.administraciònToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administraciònToolStripMenuItem.Text = "Administra Productos";
@@ -203,33 +197,6 @@
             this.registrarProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.registrarProductosToolStripMenuItem.Text = "Registrar Productos";
             this.registrarProductosToolStripMenuItem.Click += new System.EventHandler(this.registrarProductosToolStripMenuItem_Click);
-            // 
-            // administrarMarcasToolStripMenuItem
-            // 
-            this.administrarMarcasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarMarcasToolStripMenuItem,
-            this.registrarMarcasToolStripMenuItem});
-            this.administrarMarcasToolStripMenuItem.Name = "administrarMarcasToolStripMenuItem";
-            this.administrarMarcasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.administrarMarcasToolStripMenuItem.Text = "Administrar Marcas";
-            // 
-            // listarMarcasToolStripMenuItem
-            // 
-            this.listarMarcasToolStripMenuItem.Name = "listarMarcasToolStripMenuItem";
-            this.listarMarcasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.listarMarcasToolStripMenuItem.Text = "Listar Marcas";
-            // 
-            // registrarMarcasToolStripMenuItem
-            // 
-            this.registrarMarcasToolStripMenuItem.Name = "registrarMarcasToolStripMenuItem";
-            this.registrarMarcasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.registrarMarcasToolStripMenuItem.Text = "Registrar Marcas";
-            // 
-            // administrarLotesToolStripMenuItem
-            // 
-            this.administrarLotesToolStripMenuItem.Name = "administrarLotesToolStripMenuItem";
-            this.administrarLotesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.administrarLotesToolStripMenuItem.Text = "Administrar Lotes";
             // 
             // ventasToolStripMenuItem
             // 
@@ -340,10 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem administrarProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarMarcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarMarcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarMarcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarLotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciònToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
