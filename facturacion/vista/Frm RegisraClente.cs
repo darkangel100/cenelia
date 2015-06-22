@@ -21,12 +21,18 @@ namespace facturacion.vista
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
-            
+
+            if (txt_cedula.Text.Trim().Length > 0 || txt_apellido.Text.Trim().Length > 0 || txt_nombre.Text.Trim().Length > 0)
+            {
                 Adiciona();
+                Utiles.limpiar(panel1.Controls);
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar los capos aque son obligatorios", "Koreano-Chino", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             
             
-            Utiles.limpiar(panel1.Controls);
           
             
           
@@ -56,15 +62,20 @@ namespace facturacion.vista
         }
         private PersonaDB llenaCliente(PersonaDB lec)
         {
-            lec.getPersona().Apellido = txt_cedula .Text.Trim();
+            lec.getPersona().Cedula = txt_cedula .Text.Trim();
             lec.getPersona().Apellido = txt_apellido .Text.Trim();
             lec.getPersona().Nombre =txt_nombre .Text.Trim();
             lec.getPersona().Direccion = txt_direccion. Text.Trim();
             lec.getPersona().Telefono = txt_telefono. Text.Trim();
-            lec.getPersona().Estado = "A";
-            //lec.getPersona().Rol = "Cliente";
+           // lec.getPersona().Estado = "A";
+      
             
             return lec;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

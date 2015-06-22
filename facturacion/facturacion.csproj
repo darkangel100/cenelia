@@ -65,6 +65,9 @@
     <Compile Include="controlador\RolDB.cs" />
     <Compile Include="controlador\UsuarioDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
+    <Compile Include="vista\Frm_Lotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_RegistroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +100,6 @@
     </Compile>
     <Compile Include="vista\Frm_listarproveedor.Designer.cs">
       <DependentUpon>Frm_listarproveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\Frm_Lotes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\Frm_Lotes.Designer.cs">
-      <DependentUpon>Frm_Lotes.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\Frm_registarproveedor.cs">
       <SubType>Form</SubType>

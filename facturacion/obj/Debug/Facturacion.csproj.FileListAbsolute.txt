@@ -41,3 +41,4 @@ C:\Users\SONY\Desktop\nueva\Facturacion\obj\Debug\facturacion.vista.Principal.re
 C:\Users\SONY\Desktop\nueva\Facturacion\obj\Debug\Facturacion.csproj.GenerateResource.Cache
 C:\Users\SONY\Desktop\nueva\Facturacion\obj\Debug\facturacion.exe
 C:\Users\SONY\Desktop\nueva\Facturacion\obj\Debug\facturacion.pdb
+C:\Users\Israel\Desktop\Koreano Chino\Facturacion final\Facturacion\obj\Debug\facturacion.vista.Frm_Lotes.resources

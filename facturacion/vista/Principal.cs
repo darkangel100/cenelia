@@ -69,6 +69,12 @@ namespace facturacion.vista
             WindowState = FormWindowState.Minimized;
         }
 
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_listarCliente listacliente = new Frm_listarCliente();
+            listacliente.Show();
+        }
+
         
 
         

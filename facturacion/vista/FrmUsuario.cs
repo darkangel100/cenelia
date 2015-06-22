@@ -189,7 +189,7 @@ namespace facturacion.vista
         }
 
         private void txtced_KeyPress(object sender, KeyPressEventArgs e)
-        {
+       {
             
           //  Utiles.validacedula(txtced, e);
         }
