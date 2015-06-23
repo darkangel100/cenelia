@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="controlador\CuentaDB.cs" />
+    <Compile Include="controlador\EmpresaDB.cs" />
     <Compile Include="controlador\LotesDB.cs" />
     <Compile Include="controlador\PersonaDB.cs" />
     <Compile Include="controlador\ProductoDB.cs" />
@@ -68,10 +69,10 @@
     <Compile Include="vista\Frm_Lotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RegistroEmpresa.cs">
+    <Compile Include="vista\Frm_RegistroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RegistroEmpresa.Designer.cs">
+    <Compile Include="vista\Frm_RegistroEmpresa.Designer.cs">
       <DependentUpon>Frm_RegistroEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="modelo\Cuenta.cs" />
@@ -109,7 +110,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_RegistroEmpresa.resx">
+    <EmbeddedResource Include="vista\Frm_RegistroEmpresa.resx">
       <DependentUpon>Frm_RegistroEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm RegisraClente.resx">
@@ -275,6 +276,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save-as-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-arrow-left-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-arrow-left-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-user-home-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

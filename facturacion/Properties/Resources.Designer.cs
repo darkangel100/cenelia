@@ -183,6 +183,16 @@ namespace facturacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Places_user_home_icon {
+            get {
+                object obj = ResourceManager.GetObject("Places-user-home-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_as_icon {
             get {
                 object obj = ResourceManager.GetObject("Save-as-icon", resourceCulture);
@@ -206,6 +216,26 @@ namespace facturacion.Properties {
         internal static System.Drawing.Bitmap search_red_icon {
             get {
                 object obj = ResourceManager.GetObject("search-red-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_arrow_left_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-arrow-left-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_arrow_left_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("user-arrow-left-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

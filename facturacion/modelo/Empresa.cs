@@ -13,6 +13,13 @@ namespace facturacion.modelo
         private string pais;
         private string telefono;
         private string estado = "Activo";
+        private List<Empresa> listaEmpresas = new List<Empresa>();
+
+      public List<Empresa> ListaEmpresas
+        {
+            get { return listaEmpresas; }
+            set { listaEmpresas = value; }
+        }
 
         public string Estado
         {

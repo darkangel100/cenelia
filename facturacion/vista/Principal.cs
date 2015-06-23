@@ -75,6 +75,12 @@ namespace facturacion.vista
             listacliente.Show();
         }
 
+        private void registrarEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_RegistroEmpresa empreas = new Frm_RegistroEmpresa();
+            empreas.Show();
+        }
+
         
 
         
