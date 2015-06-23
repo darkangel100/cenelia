@@ -235,8 +235,9 @@ namespace facturacion.vista
             try
             {
                 PersonaDB objB = new PersonaDB();
+                UsuarioDB objU = new UsuarioDB();
                 CuentaDB objC = new CuentaDB();
-                objB.setPersona(objB.TraePersona(int.Parse( lstusu.SelectedValue.ToString())));
+                objB.setPersona(objU.TraePersona(int.Parse( lstusu.SelectedValue.ToString())));
                 objC.setCuenta(objC.Traecuenta((lstusu.SelectedValue.ToString())));
                 if (objB.getPersona().Cedula == "")
                 {
@@ -316,6 +317,11 @@ namespace facturacion.vista
             panel1.Enabled = false;
             indice = 0;
             tc1.SelectTab(indice);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

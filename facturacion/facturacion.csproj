@@ -264,6 +264,18 @@
   <ItemGroup>
     <None Include="Resources\Delete-2-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp-customization-control-panel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp-customization-control-panel-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-red-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -60,15 +60,16 @@ namespace facturacion.controlador
             per = null;
             return resp;
         }
-        public List<Persona> TraePersonas()
+        public List<Persona> TraePersonasC(string letra)
         {
-           PersonaDB per = null;
+            PersonaDB per = null;
             List<Persona> ListaCli = new List<Persona>();
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from  order by ape_per";
+              
+                string sqlcad = " select * from persona where rol_idrol=0 and   cedula=  '" + letra + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -76,15 +77,15 @@ namespace facturacion.controlador
                 while (dr.Read())
                 {
                     per = new PersonaDB();
-                    per.getPersona().Id_persona=int.Parse( dr[0].ToString());
+                    per.getPersona().Id_persona = int.Parse(dr[0].ToString());
                     per.getPersona().Cedula = dr[1].ToString();
-                    per.getPersona().Apellido = dr[2].ToString();
-                    per.getPersona().Nombre= dr[3].ToString();
+                    per.getPersona().Nombre = dr[2].ToString();
+                    per.getPersona().Apellido = dr[3].ToString();
                     per.getPersona().Direccion = dr[4].ToString();
-                    per.getPersona().Telefono= dr[5].ToString();
-                    per.getPersona().Estado= dr[6].ToString();
+                    per.getPersona().Telefono = dr[5].ToString();
+                    per.getPersona().Estado = dr[6].ToString();
 
-                    per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
                     ListaCli.Add(per.getPersona());
                 }
                 dr.Close();
@@ -103,14 +104,58 @@ namespace facturacion.controlador
             cmd = null;
             return ListaCli;
         }
-        public Persona TraePersona(int ced)
+        public List<Persona> TraePersonas(string letra)
+        {
+            PersonaDB per = null;
+            List<Persona> ListaCli = new List<Persona>();
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+       
+                string sqlcad = " select * from persona where rol_idrol=0 and   apellido_per LIKE '%" + letra + "%'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    per = new PersonaDB();
+                    per.getPersona().Id_persona = int.Parse(dr[0].ToString());
+                    per.getPersona().Cedula = dr[1].ToString();
+                    per.getPersona().Nombre = dr[2].ToString();
+                    per.getPersona().Apellido = dr[3].ToString();
+                    per.getPersona().Direccion = dr[4].ToString();
+                    per.getPersona().Telefono = dr[5].ToString();
+                    per.getPersona().Estado = dr[6].ToString();
+
+                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+                    ListaCli.Add(per.getPersona());
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                per = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                per = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return ListaCli;
+        }
+        public Persona TraePersona(string ced)
         {
           PersonaDB per = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from persona Where idPersona='" + ced + "'";
+                string sqlcad = "Select * from persona Where rol_idrol=0 and    cedula='" + ced + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -120,8 +165,8 @@ namespace facturacion.controlador
                     per = new PersonaDB();
                     per.getPersona().Id_persona = int.Parse( dr[0].ToString());
                     per.getPersona().Cedula = dr[1].ToString();
-                    per.getPersona().Apellido = dr[2].ToString();
-                    per.getPersona().Nombre= dr[3].ToString();
+                    per.getPersona().Nombre = dr[2].ToString();
+                    per.getPersona().Apellido= dr[3].ToString();
                     per.getPersona().Direccion = dr[4].ToString();
                     per.getPersona().Telefono = dr[5].ToString();
                     per.getPersona().Estado = dr[6].ToString();

@@ -143,6 +143,26 @@ namespace facturacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hp_customization_control_panel_icon {
+            get {
+                object obj = ResourceManager.GetObject("hp-customization-control-panel-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hp_customization_control_panel_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("hp-customization-control-panel-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
@@ -166,6 +186,26 @@ namespace facturacion.Properties {
         internal static System.Drawing.Bitmap Save_as_icon {
             get {
                 object obj = ResourceManager.GetObject("Save-as-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_as_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Save-as-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_red_icon {
+            get {
+                object obj = ResourceManager.GetObject("search-red-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
