@@ -13,41 +13,63 @@ namespace facturacion.controlador
     class ProveedorDB
     {
         Conexion con = new Conexion();
-        Persona per = null;
+        //Persona per = null;
 
-        public Persona getPersona()
+
+
+        private Proveedor proveedor = null;
+
+        public Proveedor getProveedor()
         {
-            if (this.per == null)
+            if (this.proveedor == null)
             {
-                this.per = new Persona();
-              Proveedor proveedor = new Proveedor();
-                this.per.Proveedor = proveedor;
-               
+                this.proveedor = new Proveedor();
             }
-            return this.per;
+            return this.proveedor;
         }
-
-
-        ////REVISAR LA ASIGN ACION DE LA EMPRESA AL PROVEEDOR
-
-        //public Persona getPersona()
-        //{
-        //    if (this.persona == null)
-        //    {
-        //        this.persona = new Persona();
-        //        Direccion direccion = new Direccion();
-        //        this.persona.Direccion = direccion;
-        //    }
-        //    return this.persona;
-        //}
-        public void setPersona(Persona pers)
+        public void setProveedor(Proveedor provedeor)
         {
-            this.per = pers;
+            this.proveedor = provedeor;
         }
-        public void limpiar()
+        public int traeId(string nom)
         {
-            this.per = null;
+            int num = 0;
+            RolDB r = null;
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+                string sqlrol = "Select * from empresa where nombre='" + nom + "'";
+                cmd = new MySqlCommand(sqlrol, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    num = Convert.ToInt32(dr["idrol"]);
+                }
+
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                num = 0;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                num = 0;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return num;
+
         }
+       
+
+       
+        
         public int InsertaProveedor(Persona per)
         {
             MySqlCommand cmd;

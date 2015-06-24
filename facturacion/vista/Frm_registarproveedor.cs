@@ -21,85 +21,100 @@ namespace facturacion
         int fila = -1;
         private void Frm_registarproveedor_Load(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Transparent;
-            groupBox1.BackColor = Color.Transparent;
+            llenaempresa(comboBox1);
         }
 
-        //private void btnguardar_Click(object sender, EventArgs e)
-        //{
-        //    if (estado == "N")
-        //    {
-        //        Adiciona();
-        //    }
-        //    if (estado == "E")
-        //    {
-        //        Editar();
-        //    }
-        //    Utiles.limpiar(panel1.Controls);
-        //    panel1.Enabled = false;
-        //    //chkeliminados.Checked = false;
-        //    llenaClientes("A");
-        //}
+        private void llenaempresa(ComboBox cbo)
+        {
+            try
+            {
+                EmpresaDB objE = new EmpresaDB();
+                objE.getEmpresa().ListaEmpresas= objE.TraeEmpresas();
+                if (objE.getEmpresa().ListaEmpresas.Count == 0)
+                {
+                    MessageBox.Show("No existen registros de Categorias", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                cbo.DisplayMember = "nombreEmpresa";
+                cbo.ValueMember = "idempresa";
+                cbo.DataSource = objE.getEmpresa().ListaEmpresas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        int id_persona;
+        string num;
+        
+        
         private void Adiciona()
         {
-            try
-            {
-               ProveedorDB objC = new ProveedorDB();
-                int resp;
-                llenaCliente(objC);
-                resp = objC.InsertaProveedor(objC.getPersona());
-                if (resp == 0)
-                {
-                    MessageBox.Show("No se ingreso datos del Cliente", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente Ingresado", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estado = "";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al Ingresar Datos," + ex.Message, "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void Editar()
-        {
-            try
-            {
-                ProveedorDB  objP = new ProveedorDB();
-                int resp=0;
-                llenaCliente(objP);
-                //resp = objP.ActualizaCliente(objP.getPersona());
-                if (resp == 0)
-                {
-                    MessageBox.Show("No se modifico datos del Cliente", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente Modificado", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estado = "";
-                //    llenaProveedor("A");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al Ingresar Datos," + ex.Message, "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private ProveedorDB llenaCliente(ProveedorDB lec)
-        {
-            lec.getPersona().Cedula = txtced.Text.Trim();
-            lec.getPersona().Apellido = txtape.Text.Trim();
-            lec.getPersona().Nombre = txtnom.Text.Trim();
-            lec.getPersona().Direccion = txtdir.Text.Trim();
-            lec.getPersona().Telefono= txttel.Text.Trim();
            
-            if (radioButton1. Checked == true)
-                lec.getPersona().Estado = "A";
+            try
+            {
+
+             PersonaDB objP = new PersonaDB();
+             ProveedorDB objPro = new ProveedorDB();
+              
+                int resp=0;
+                
+                objP.getPersona().Cedula = txtced.Text.Trim();
+                objP.getPersona().Nombre = txtnom.Text.Trim();
+                objP.getPersona().Apellido = txtape. Text.Trim();
+                objP.getPersona().Direccion = txtdir. Text.Trim();
+                objP.getPersona().Telefono = txttel. Text.Trim();
+
+                objP.getPersona().Id_rol = int.Parse("3");
+                objPro.getProveedor().Ruc = txtruc.Text.Trim();
+                objPro.getProveedor().Id_persona = id_persona;
+
+                //falta revisar esto
+
+              ///  objPro.getProveedor().IdEmpresa =int.Parse(objPro.traeId(comboBox1.SelectedItem.ToString()));
+
+                   resp = objP.InsertaCliente(objP.getPersona());
+
+                
+                if (resp == 0)
+                {
+                    MessageBox.Show("No se ingreso datos de Proveedor", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+              if(resp==1)
+                {
+                    MessageBox.Show("Usuario Ingresado", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 
+            
+                   
+                   Utiles.limpiar(panel1.Controls);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Ingresar Datos," + ex.Message, "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
+        }
+       
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Frm_RegistroEmpresa empresa = new Frm_RegistroEmpresa();
+            empresa.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            PersonaDB objP = new PersonaDB();
+            num = objP.traenumero();
+            if (num.Equals(""))
+            {
+                id_persona = 1;
+            }
             else
-                lec.getPersona().Estado = "P";
-            return lec;
+            {
+                id_persona = Convert.ToInt32(num);
+                id_persona++;
+            }
         }
       
         

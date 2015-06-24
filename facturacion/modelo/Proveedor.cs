@@ -9,6 +9,21 @@ namespace facturacion.modelo
     {
         private string nomEmpresa;
         private string ruc;
+        private List<Proveedor> listaProveedor = new List<Proveedor>();
+        private int idEmpresa;
+
+    public int IdEmpresa
+        {
+            get { return idEmpresa; }
+            set { idEmpresa = value; }
+        }
+
+        internal List<Proveedor> ListaProveedor
+        {
+            get { return listaProveedor; }
+            set { listaProveedor = value; }
+        }
+
 
         public string Ruc
         {
