@@ -121,6 +121,7 @@
             this.txt_texto.Name = "txt_texto";
             this.txt_texto.Size = new System.Drawing.Size(140, 20);
             this.txt_texto.TabIndex = 16;
+            this.txt_texto.TextChanged += new System.EventHandler(this.txt_texto_TextChanged);
             this.txt_texto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_texto_KeyPress);
             // 
             // cbx_criterio

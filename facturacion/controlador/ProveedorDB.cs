@@ -39,14 +39,14 @@ namespace facturacion.controlador
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlrol = "Select * from empresa where nombre='" + nom + "'";
+                string sqlrol = "Select * from empresa where nombre_empresa='" + nom + "'";
                 cmd = new MySqlCommand(sqlrol, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    num = Convert.ToInt32(dr["idrol"]);
+                    num = Convert.ToInt32(dr["idempresa"]);
                 }
 
                 dr.Close();
@@ -70,14 +70,15 @@ namespace facturacion.controlador
 
        
         
-        public int InsertaProveedor(Persona per)
+        public int InsertaProveedor(Proveedor per)
         {
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             int resp;
             try
             {
-                string sqlcad = "Insert Persona Values ('" + per.Cedula + "','" + per.Apellido + "','" + per.Nombre + "','" + per.Direccion + "','" + per.Telefono + "','" + per.Estado + "')";
+                string sqlcad = "Insert proveedor set ruc='" + per.Ruc + "', persona_idpersona='" + per.Id_persona + "', empresa_idempresa='" + per.IdEmpresa + "'";
+               // string sqlcad = "Insert proveedor Values ('" + per.Ruc + "','" + per.Id_persona + "','" + per.IdEmpresa+  "')";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -125,31 +126,33 @@ namespace facturacion.controlador
             cmd = null;
             return resp;
         }
-        public List<Persona> Traepersonas(string est)
+        public List<Persona> TraeProveedoresC(string letra)
         {
-           ProveedorDB per = null;
-            List<Persona> ListaProveedor = new List<Persona>();
+            PersonaDB per = null;
+            List<Persona> ListaCli = new List<Persona>();
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from proveedor where est_per='" + est + "' order by ape_per";
+
+                string sqlcad = " select * from persona where rol_idrol=3 and   cedula=  '" + letra + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    per = new ProveedorDB();
-                    per.getPersona().Cedula = dr[0].ToString();
-                    per.getPersona().Apellido = dr[1].ToString();
-                    per.getPersona().Nombre= dr[2].ToString();
-                    per.getPersona().Direccion = dr[3].ToString();
-                    per.getPersona().Telefono= dr[4].ToString();
-                    per.getPersona().Estado= dr[5].ToString();
-                    
-                    per.getPersona().Nombre = per.getPersona().Apellido+ " " + per.getPersona().Nombre;
-              ListaProveedor.Add(per.getPersona());
+                    per = new PersonaDB();
+                    per.getPersona().Id_persona = int.Parse(dr[0].ToString());
+                    per.getPersona().Cedula = dr[1].ToString();
+                    per.getPersona().Nombre = dr[2].ToString();
+                    per.getPersona().Apellido = dr[3].ToString();
+                    per.getPersona().Direccion = dr[4].ToString();
+                    per.getPersona().Telefono = dr[5].ToString();
+                    per.getPersona().Estado = dr[6].ToString();
+
+                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+                    ListaCli.Add(per.getPersona());
                 }
                 dr.Close();
             }
@@ -165,11 +168,11 @@ namespace facturacion.controlador
             }
             cn.Close();
             cmd = null;
-            return ListaProveedor;
+            return ListaCli;
         }
-        public Persona Traepersona(string ced)
+        public Persona TraeProveedor(string ced)
         {
-           ProveedorDB per = null;
+           PersonaDB per = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
@@ -181,7 +184,7 @@ namespace facturacion.controlador
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    per = new ProveedorDB();
+                    per = new PersonaDB();
                     per.getPersona().Cedula = dr[0].ToString();
                     per.getPersona().Apellido = dr[1].ToString();
                     per.getPersona().Nombre = dr[2].ToString();
@@ -232,6 +235,50 @@ namespace facturacion.controlador
             cn.Close();
             cmd = null;
             return resp;
+        }
+        public List<Persona> Traeproveedores(string letra)
+        {
+          ProveedorDB per = null;
+            List<Persona> ListaCli = new List<Persona>();
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+
+                string sqlcad = " select * from persona where rol_idrol=3 and   apellido_per LIKE '%" + letra + "%'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    per = new ProveedorDB();
+                  per.getProveedor().Id_persona = int.Parse(dr[0].ToString());
+                  per.getProveedor().Cedula = dr[1].ToString();
+                  per.getProveedor().Nombre = dr[2].ToString();
+                  per.getProveedor().Apellido = dr[3].ToString();
+                  per.getProveedor().Direccion = dr[4].ToString();
+                  per.getProveedor().Telefono = dr[5].ToString();
+                  per.getProveedor().Estado = dr[6].ToString();
+
+                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+                    ListaCli.Add(per.getProveedor());
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                per = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                per = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return ListaCli;
         }
     }
 }

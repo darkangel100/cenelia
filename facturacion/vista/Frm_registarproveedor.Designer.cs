@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_registarproveedor));
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtruc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxE = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -49,8 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtruc = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtruc);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBoxE);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txtnom);
             this.panel1.Controls.Add(this.label1);
@@ -94,6 +94,23 @@
             this.panel1.Size = new System.Drawing.Size(402, 346);
             this.panel1.TabIndex = 65;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(45, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 13);
+            this.label9.TabIndex = 82;
+            this.label9.Text = "Ruc";
+            // 
+            // txtruc
+            // 
+            this.txtruc.Location = new System.Drawing.Point(117, 64);
+            this.txtruc.Name = "txtruc";
+            this.txtruc.Size = new System.Drawing.Size(167, 20);
+            this.txtruc.TabIndex = 83;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -105,13 +122,14 @@
             this.label5.Text = "Nueva Empresa";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // comboBox1
+            // comboBoxE
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 227);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 80;
+            this.comboBoxE.FormattingEnabled = true;
+            this.comboBoxE.Location = new System.Drawing.Point(117, 227);
+            this.comboBoxE.Name = "comboBoxE";
+            this.comboBoxE.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxE.TabIndex = 80;
+           
             // 
             // groupBox1
             // 
@@ -262,23 +280,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(45, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 13);
-            this.label9.TabIndex = 82;
-            this.label9.Text = "Ruc";
-            // 
-            // txtruc
-            // 
-            this.txtruc.Location = new System.Drawing.Point(117, 64);
-            this.txtruc.Name = "txtruc";
-            this.txtruc.Size = new System.Drawing.Size(167, 20);
-            this.txtruc.TabIndex = 83;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_registarproveedor
             // 
@@ -322,7 +324,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txttel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxE;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;

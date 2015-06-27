@@ -202,5 +202,12 @@ apellido += letra;
                Utiles.limpiar(groupBox2.Controls);
                groupBox2.Enabled = false;
            }
+
+           private void txt_texto_TextChanged(object sender, EventArgs e)
+           {
+
+           }
+
+           
     }
 }

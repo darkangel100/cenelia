@@ -60,7 +60,7 @@ namespace facturacion.controlador
             per = null;
             return resp;
         }
-        public List<Persona> TraePersonasC(string letra)
+        public List<Persona> TraePersonasC(string letra)//metodo trae cliente por cedula
         {
             PersonaDB per = null;
             List<Persona> ListaCli = new List<Persona>();
@@ -104,7 +104,7 @@ namespace facturacion.controlador
             cmd = null;
             return ListaCli;
         }
-        public List<Persona> TraePersonas(string letra)
+        public List<Persona> TraePersonas(string letra)//metodo trae cliente por apellido
         {
             PersonaDB per = null;
             List<Persona> ListaCli = new List<Persona>();
@@ -148,7 +148,7 @@ namespace facturacion.controlador
             cmd = null;
             return ListaCli;
         }
-        public Persona TraePersona(string ced)
+        public Persona TraePersona(string ced)//metodo para  traer un solo cliente cliente
         {
           PersonaDB per = null;
             MySqlCommand cmd;
@@ -188,7 +188,7 @@ namespace facturacion.controlador
             return per.getPersona();
         }
 
-        public int ActualizaCliente(Persona per)
+        public int ActualizaCliente(Persona per)//metodo para modificar Cliente
         {
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
@@ -242,7 +242,7 @@ namespace facturacion.controlador
             cn.Close();
             cmd = null;
             return resp;
-        }
+        }//metodo para cambiar de estado a un cliente
 
         public string traenumero()
         {
@@ -274,8 +274,8 @@ namespace facturacion.controlador
             cn.Close();
             cmd = null;
             return num;
-        }
-        public int traeId(string nom)
+        }//trae numrero
+        public int traeId(string nom)//trae id de rol
         {
             int num = 0;
             RolDB r = null;

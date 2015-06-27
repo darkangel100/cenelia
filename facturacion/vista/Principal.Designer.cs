@@ -229,6 +229,7 @@
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
             this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.proveedorToolStripMenuItem.Text = "Administra Proveedor";
+            this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
             // registrarProveedorToolStripMenuItem
             // 
@@ -242,6 +243,7 @@
             this.listarProveedorToolStripMenuItem.Name = "listarProveedorToolStripMenuItem";
             this.listarProveedorToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.listarProveedorToolStripMenuItem.Text = "Listar Proveedor";
+            this.listarProveedorToolStripMenuItem.Click += new System.EventHandler(this.listarProveedorToolStripMenuItem_Click);
             // 
             // registrarEmpresaToolStripMenuItem
             // 

@@ -32,7 +32,7 @@ namespace facturacion.controlador
             this.usuario = usuario;
         }
 
-        public List<Persona> Traeusuarios()
+        public List<Persona> Traeusuarios()//trae todos los usuarios administrador o usuario
         {
             Persona usu = null;
             List<Persona> ListaUsu = new List<Persona>();//crea la lista de los usuarios
@@ -79,14 +79,14 @@ namespace facturacion.controlador
             return ListaUsu;// retorno a llenado datos
         }
 
-        public Persona TraePersona(int ced)
+        public Persona TraeUsuario(int ced)
         {
             PersonaDB per = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string sqlcad = "Select * from persona Where     cedula='" + ced + "'";
+                string sqlcad = "Select * from persona Where     idpersona='" + ced + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();

@@ -21,11 +21,12 @@ namespace facturacion
         int fila = -1;
         private void Frm_registarproveedor_Load(object sender, EventArgs e)
         {
-            llenaempresa(comboBox1);
+            llenaempresa();
         }
 
-        private void llenaempresa(ComboBox cbo)
+        private void llenaempresa()
         {
+          
             try
             {
                 EmpresaDB objE = new EmpresaDB();
@@ -34,9 +35,9 @@ namespace facturacion
                 {
                     MessageBox.Show("No existen registros de Categorias", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                cbo.DisplayMember = "nombreEmpresa";
-                cbo.ValueMember = "idempresa";
-                cbo.DataSource = objE.getEmpresa().ListaEmpresas;
+                comboBoxE. DisplayMember = "nombreEmpresa";
+               comboBoxE. ValueMember = "idempresa";
+                comboBoxE. DataSource = objE.getEmpresa().ListaEmpresas;
             }
             catch (Exception ex)
             {
@@ -57,6 +58,7 @@ namespace facturacion
              ProveedorDB objPro = new ProveedorDB();
               
                 int resp=0;
+                int resp1 = 0;
                 
                 objP.getPersona().Cedula = txtced.Text.Trim();
                 objP.getPersona().Nombre = txtnom.Text.Trim();
@@ -69,19 +71,21 @@ namespace facturacion
                 objPro.getProveedor().Id_persona = id_persona;
 
                 //falta revisar esto
+            //    string aux = comboBoxE.SelectedText ;
 
-              ///  objPro.getProveedor().IdEmpresa =int.Parse(objPro.traeId(comboBox1.SelectedItem.ToString()));
+                objPro.getProveedor().IdEmpresa = objPro.traeId(comboBoxE.Text.ToString());
 
                    resp = objP.InsertaCliente(objP.getPersona());
+                   resp1 = objPro.InsertaProveedor(objPro.getProveedor());
 
                 
-                if (resp == 0)
+                if (resp == 0||resp1==0)
                 {
-                    MessageBox.Show("No se ingreso datos de Proveedor", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se ingreso datos de Proveedor", "Koreano-Chino", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-              if(resp==1)
+              if(resp==1&resp1==1)
                 {
-                    MessageBox.Show("Usuario Ingresado", "Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Proveedor Ingresado", "Koreano-Chino", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  
             
                    
@@ -115,6 +119,13 @@ namespace facturacion
                 id_persona = Convert.ToInt32(num);
                 id_persona++;
             }
+            Adiciona();
+        }
+        int idempresa;
+       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
       
         

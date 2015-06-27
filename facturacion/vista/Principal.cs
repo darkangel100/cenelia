@@ -81,6 +81,17 @@ namespace facturacion.vista
             empreas.Show();
         }
 
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_listarproveedor proveedor = new Frm_listarproveedor();
+            proveedor.Show();
+        }
+
         
 
         

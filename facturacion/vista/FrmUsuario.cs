@@ -237,7 +237,7 @@ namespace facturacion.vista
                 PersonaDB objB = new PersonaDB();
                 UsuarioDB objU = new UsuarioDB();
                 CuentaDB objC = new CuentaDB();
-                objB.setPersona(objU.TraePersona(int.Parse( lstusu.SelectedValue.ToString())));
+                objB.setPersona(objU.TraeUsuario(int.Parse( lstusu.SelectedValue.ToString())));
                 objC.setCuenta(objC.Traecuenta((lstusu.SelectedValue.ToString())));
                 if (objB.getPersona().Cedula == "")
                 {
