@@ -10,11 +10,11 @@ namespace facturacion.modelo
         private string cla_usu;
         private Rol rol;
 
-        public Rol Rol
-        {
-            get { return rol; }
-            set { rol = value; }
-        }
+        //public Rol Rol
+        //{
+        //    get { return rol; }
+        //    set { rol = value; }
+        //}
 
         public string clausu
         {

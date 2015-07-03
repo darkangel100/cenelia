@@ -22,11 +22,11 @@ namespace facturacion.modelo
             set { id_per = value; }
         }
 
-        public string Estado
-        {
-            get { return estado; }
-            set { estado = value; }
-        }
+        //public string Estado
+        //{
+        //    get { return estado; }
+        //    set { estado = value; }
+        //}
         public string Usuario21
         {
             get { return usuario21; }
@@ -58,11 +58,7 @@ namespace facturacion.modelo
             get { return clave; }
             set { clave = value; }
         }
-        override
-        public string ToString()
-        {
-            return this.usuario21;
-        }
+        
 
 
 

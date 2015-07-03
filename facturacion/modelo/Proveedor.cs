@@ -5,12 +5,20 @@ using System.Text;
 
 namespace facturacion.modelo
 {
-    class Proveedor:Persona
+    class Proveedor
     {
         private string nomEmpresa;
         private string ruc;
-        private List<Proveedor> listaProveedor = new List<Proveedor>();
+        private List<Proveedor> listaProveedorT = new List<Proveedor>();
         private int idEmpresa;
+        private string estado;
+        private int idpersona;
+
+        public string Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
 
     public int IdEmpresa
         {
@@ -18,10 +26,10 @@ namespace facturacion.modelo
             set { idEmpresa = value; }
         }
 
-        internal List<Proveedor> ListaProveedor
+        internal List<Proveedor> ListaProveedorT
         {
-            get { return listaProveedor; }
-            set { listaProveedor = value; }
+            get { return listaProveedorT; }
+            set { listaProveedorT = value; }
         }
 
 
@@ -36,10 +44,20 @@ namespace facturacion.modelo
             get { return nomEmpresa; }
             set { nomEmpresa = value; }
         }
-        override
-        public string ToString()
+
+        public int Idpersona
         {
-            return this.Apellido + " " + this.Nombre;
+            get
+            {
+                return idpersona;
+            }
+
+            set
+            {
+                idpersona = value;
+            }
         }
+
+       
     }
 }
