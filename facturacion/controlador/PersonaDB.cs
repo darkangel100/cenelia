@@ -32,6 +32,7 @@ namespace facturacion.controlador
         {
             this.per = null;
         }
+        //es este
         public int InsertaCliente(Persona per)
         {
             MySqlCommand cmd;
@@ -278,7 +279,7 @@ namespace facturacion.controlador
         public int traeId(string nom)//trae id de rol
         {
             int num = 0;
-            RolDB r = null;
+            //RolDB r = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
@@ -310,6 +311,45 @@ namespace facturacion.controlador
             return num;
 
         }
-
+        public Persona TraePersonaP(string ced)//metodo para  traer un solo cliente cliente
+        {
+            PersonaDB per = null;
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+                string sqlcad = "Select * from persona Where rol_idrol=3 and    cedula='" + ced + "'";
+                cmd = new MySqlCommand(sqlcad, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    per = new PersonaDB();
+                    per.getPersona().Id_persona = int.Parse(dr[0].ToString());
+                    per.getPersona().Cedula = dr[1].ToString();
+                    per.getPersona().Nombre = dr[2].ToString();
+                    per.getPersona().Apellido = dr[3].ToString();
+                    per.getPersona().Direccion = dr[4].ToString();
+                    per.getPersona().Telefono = dr[5].ToString();
+                    per.getPersona().Estado = dr[6].ToString();
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                per = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                per = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return per.getPersona();
+        }
+        
     }
 }

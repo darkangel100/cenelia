@@ -13,7 +13,6 @@ namespace facturacion.controlador
     class UsuarioDB
     {
         Conexion con = new Conexion();
-        Persona per = null;
 
 
 
@@ -40,7 +39,7 @@ namespace facturacion.controlador
             MySqlConnection cn = con.GetConnection();// conectar a la base de datos , obten la conexon
             try
             {
-               // string sqlcad = "Select * from persona order by nom_usu";//cadena sql
+                // string sqlcad = "Select * from persona order by nom_usu";//cadena sql
                 string sqlcad = "Select * from persona where rol_idrol=1 || rol_idrol=2 order by nombre_per";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
@@ -50,15 +49,15 @@ namespace facturacion.controlador
                 {
                     usu = new Persona();//crea los usuarios importante
                     usu.Id_persona = int.Parse(dr["idPersona"].ToString());
-                    usu.Cedula = dr["cedula"].ToString() ;//nombre de las tablas
+                    usu.Cedula = dr["cedula"].ToString();//nombre de las tablas
                     usu.Nombre = dr["nombre_per"].ToString();
                     usu.Apellido = dr["apellido_per"].ToString();
-                    usu.Direccion= dr["direccion"].ToString();
+                    usu.Direccion = dr["direccion"].ToString();
                     usu.Telefono = dr["telefono"].ToString();
                     usu.Estado = dr["estado"].ToString();
                     //usu.Cuenta.Usuario21 = dr["usuario"].ToString();
                     //      usu.Cuenta.Clave = dr["clave"].ToString();
-                 // usu. Nombre = usu.Apellido + " " +usu.Nombre;
+                    // usu. Nombre = usu.Apellido + " " +usu.Nombre;
                     //            ListaUsu.Add(per.getPersona());
                     ListaUsu.Add(usu);
                 }
