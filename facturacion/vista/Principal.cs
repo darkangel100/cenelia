@@ -92,6 +92,17 @@ namespace facturacion.vista
             proveedor.Show();
         }
 
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void facturaciònToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_factura factura = new Frm_factura();
+            factura.Show();
+        }
+
         
 
         

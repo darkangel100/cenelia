@@ -17,7 +17,7 @@ namespace facturacion
         {
             InitializeComponent();
         }
-       private string estado = "";
+       
         int fila = -1;
         private void Frm_registarproveedor_Load(object sender, EventArgs e)
         {
@@ -44,7 +44,7 @@ namespace facturacion
                 MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        int id_persona;
+       public int id_persona;
         string num;
         
         
@@ -68,14 +68,14 @@ namespace facturacion
 
                 objP.getPersona().Id_rol = int.Parse("3");
                 objPro.getProveedor().Ruc = txtruc.Text.Trim();
-                objPro.getProveedor().Id_persona = id_persona;
+                objPro.getProveedor().Idpersona= id_persona;
 
                 //falta revisar esto
             //    string aux = comboBoxE.SelectedText ;
 
-                objPro.getProveedor().IdEmpresa = objPro.traeId(comboBoxE.Text.ToString());
+                objPro.getProveedor().IdEmpresa = objPro.traeidEmpresa(comboBoxE.Text.ToString());
 
-                   resp = objP.InsertaCliente(objP.getPersona());
+                 resp = objP.InsertaCliente(objP.getPersona());
                    resp1 = objPro.InsertaProveedor(objPro.getProveedor());
 
                 

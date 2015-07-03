@@ -103,6 +103,18 @@ apellido += letra;
              txt_texto.Enabled = true;
              txt_texto.Focus();
          }
+         if (cbx_criterio.SelectedIndex==0)
+         {
+             txt_texto.Text = "";
+             tbl_tabla.Rows.Clear();
+             pictureBox2.Enabled = true;
+         }
+         if (cbx_criterio.SelectedIndex==1)
+         {
+             txt_texto.Text = "";
+             tbl_tabla.Rows.Clear();
+             pictureBox2.Enabled = false;
+         }
      }
 
      private void pictureBox2_Click(object sender, EventArgs e)
@@ -158,6 +170,7 @@ apellido += letra;
          
          Utiles.limpiar(groupBox2. Controls);
          tbl_tabla.Rows.Clear();
+         llenaClientes(txt_texto.Text.ToString(), tipoC);
          groupBox2.Enabled = false;
      }
            private void Editar()

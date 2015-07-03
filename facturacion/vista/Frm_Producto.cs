@@ -72,7 +72,7 @@ namespace facturacion.vista
             try
             {
                 ProductoDB objP = new ProductoDB();
-                int resp;
+                //int resp;
                 objP.getProductos().Id_producto = Convert.ToInt32(txt_codigo.Text.Trim());
                 objP.getProductos().Nombre = txt_nombre.Text.Trim(); ;
                 objP.getProductos().Presentacion= txt_present.Text.Trim();

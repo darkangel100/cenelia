@@ -168,7 +168,7 @@ namespace facturacion.vista
             txtced.Enabled = true;
             txtced.Focus();
         }
-        private void llenaRol(ComboBox cbo)
+        private void llenaRol(ComboBox cbo)//Llena combobox de roles
         {
             try
             {

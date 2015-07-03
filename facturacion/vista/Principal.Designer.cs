@@ -207,18 +207,20 @@
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // facturaciònToolStripMenuItem
             // 
             this.facturaciònToolStripMenuItem.Name = "facturaciònToolStripMenuItem";
-            this.facturaciònToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.facturaciònToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.facturaciònToolStripMenuItem.Text = "Facturaciòn";
+            this.facturaciònToolStripMenuItem.Click += new System.EventHandler(this.facturaciònToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem.Text = "Listar & Anular";
             // 
             // proveedorToolStripMenuItem
             // 

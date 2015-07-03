@@ -71,7 +71,7 @@ namespace facturacion.vista
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Contraseña o Usuario Incorrecta ","Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Contraseña o Usuario Incorrecta "+ex.Message,"Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     textBox1.Focus();
                 }
             }
