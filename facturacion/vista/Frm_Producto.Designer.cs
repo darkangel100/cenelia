@@ -70,7 +70,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::facturacion.Properties.Resources.Delete_2_icon;
             this.pictureBox1.Location = new System.Drawing.Point(491, 197);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
@@ -81,7 +80,6 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::facturacion.Properties.Resources.Save_as_icon;
             this.pictureBox2.Location = new System.Drawing.Point(491, 107);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
@@ -147,7 +145,6 @@
             // 
             // txt_present
             // 
-            this.txt_present.Enabled = false;
             this.txt_present.Location = new System.Drawing.Point(179, 186);
             this.txt_present.Name = "txt_present";
             this.txt_present.Size = new System.Drawing.Size(158, 20);

@@ -73,16 +73,28 @@ namespace facturacion.vista
             {
                 ProductoDB objP = new ProductoDB();
                 //int resp;
-                objP.getProductos().Id_producto = Convert.ToInt32(txt_codigo.Text.Trim());
+                objP.getProductos().Codigo = Convert.ToInt32(txt_codigo.Text.Trim());
                 objP.getProductos().Nombre = txt_nombre.Text.Trim(); ;
                 objP.getProductos().Presentacion= txt_present.Text.Trim();
                 objP.getProductos().Unidad = txt_unidad.Text.Trim();
                 objP.getProductos().Marca= txt_marca.Text.Trim();
-                
+                int resp = objP.insertaProducto(objP.getProductos());
+                if (resp == 0)
+                {
+                    MessageBox.Show("No se ingreso el producto", "Tienda", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Producto Registrado", "Tienda", MessageBoxButtons.OK);
+                    estado = "";
+                }
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show("Error al ingresar los datos " + ex.Message, "Tienda", MessageBoxButtons.OK);
+            }
         }
+
 
         private void txt_pc_TextChanged(object sender, EventArgs e)
         {
