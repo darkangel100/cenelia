@@ -94,10 +94,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::facturacion.Properties.Resources.search_red_icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Enabled = false;
-            this.pictureBox2.Location = new System.Drawing.Point(374, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(394, 32);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 39);
             this.pictureBox2.TabIndex = 23;
@@ -257,7 +256,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::facturacion.Properties.Resources.Delete_2_icon;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.Location = new System.Drawing.Point(464, 182);
             this.pictureBox4.Name = "pictureBox4";
@@ -269,7 +267,6 @@
             // 
             // ptbguardar
             // 
-            this.ptbguardar.BackgroundImage = global::facturacion.Properties.Resources.Save_as_icon1;
             this.ptbguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ptbguardar.Enabled = false;
             this.ptbguardar.Location = new System.Drawing.Point(302, 182);
@@ -402,7 +399,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::facturacion.Properties.Resources.hp_customization_control_panel_icon__1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(723, 357);
             this.pictureBox1.Name = "pictureBox1";
@@ -415,7 +411,6 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::facturacion.Properties.Resources.Delete_2_icon;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Location = new System.Drawing.Point(723, 482);
             this.pictureBox3.Name = "pictureBox3";
