@@ -11,17 +11,19 @@ namespace facturacion.modelo
         private string nombre;
         private string presentacion;
         private string unidad;
-        private int codigo;
-
-        public int Codigo
+        private string codigo;
+        private List<Produccto> listaProductos = new List<Produccto>();
+        private string marca;
+        private int id_lote;
+        private List<Lote> lote = new List<Lote>();
+        public string Codigo
         {
             get { return codigo; }
             set { codigo = value; }
         }
 
 
-        private List<Produccto> listaProductos = new List<Produccto>();
-        private string marca;
+        
 
         public string Marca
         {
