@@ -75,7 +75,7 @@ namespace facturacion.controlador
             int resp;
             try
             {
-                string comandoSql = "Insert producto Values ('" + producto.Codigo + "','" + producto.Nombre + "','" + producto.Marca + "','" + producto.Unidad + "','" + producto.Presentacion +  "')";
+                string comandoSql = "Insert producto Values ('" + producto.Codigo + "','" + producto.Nombre + "','" + producto.Unidad + "','" + producto.Presentacion + "','" + producto.Marca +  "')";
                 cmd = new MySqlCommand(comandoSql, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -136,6 +136,47 @@ namespace facturacion.controlador
             cn.Close();
             cmd = null;
             return listaPro;
+        }
+        public Produccto traeProducto(string cod)
+        {
+            Produccto p = null;
+            Lote l = null;
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+                string comandoSql = "Select * from producto where id_Producto='" + cod + "'";
+                cmd = new MySqlCommand(comandoSql, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    p = new Produccto();
+                    l = new Lote();
+                    p.Codigo = dr["id_Producto"].ToString();
+                    p.Nombre = dr["nombre_prod"].ToString();
+                    p.Unidad = dr["unidad"].ToString();
+                    p.Presentacion = dr["presentacion"].ToString();
+                    p.Marca = dr["marca_prod"].ToString();
+                    l.Id_Lote = int.Parse(dr["idLote"].ToString());
+               
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                p = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                p = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return p;
         }
         public int actualizaProductoStock(Produccto p)
         {
