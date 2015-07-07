@@ -195,6 +195,17 @@ namespace facturacion.controlador
         {
 
         }
+        public int cuentaE()
+        {
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            string commandLine = "SELECT COUNT(*) FROM cuenta";
+            cmd = new MySqlCommand(commandLine, cn);
+            cmd.CommandType = CommandType.Text;
+            cn.Open();
+            return Convert.ToInt32(cmd.ExecuteScalar());
+
+        }
         
     }
 }

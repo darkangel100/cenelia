@@ -69,6 +69,12 @@
     <Compile Include="vista\Frm_Lotes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\Frm_NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Frm_NuevoUsuario.Designer.cs">
+      <DependentUpon>Frm_NuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Frm_RegistroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="vista\Frm_NuevoUsuario.resx">
+      <DependentUpon>Frm_NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Frm_RegistroEmpresa.resx">
       <DependentUpon>Frm_RegistroEmpresa.cs</DependentUpon>
     </EmbeddedResource>

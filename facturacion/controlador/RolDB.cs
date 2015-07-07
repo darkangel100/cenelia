@@ -41,18 +41,24 @@ namespace facturacion.controlador
         }
         public void crearNuevosRoles()
         {
-            Rol r1 = new Rol();
-            r1.Nombre=("Gerente");
-            r1.Id_rol = this.generarId();
-            this.InsertaRol(r1);
+            
+           Rol r3 = new Rol();
+            r3.Nombre ="Cliente";
+            r3.Id_rol = 0;
+            InsertaRol(r3);
             Rol r2 = new Rol();
-            r2.Nombre=("Vendedor");
-            r2.Id_rol = this.generarId();
-            this.InsertaRol(r2);
-            Rol r3 = new Rol();
-            r3.Nombre = ("Cliente");
-            r3.Id_rol = this.generarId();
-            this.InsertaRol(r3);
+            r2.Nombre="Vendedor";
+            r2.Id_rol = 1;
+            InsertaRol(r2);
+            Rol r1 = new Rol();
+            r1.Nombre = "Gerente";
+            r1.Id_rol = 2;
+            InsertaRol(r1);
+            
+            Rol r4 = new Rol();
+            r4.Nombre = "proveedor";
+            r4.Id_rol = 3;
+            InsertaRol(r4);
         }
         public int InsertaRol(Rol rol)
         {
@@ -61,7 +67,7 @@ namespace facturacion.controlador
             int resp;
             try
             {
-                string sqlcad = "Insert Rol Values ('" + rol.Nombre + "','" + rol+"')";
+                string sqlcad = "Insert Rol Values ('" + rol.Id_rol + "','" + rol.Nombre+"')";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -69,6 +75,7 @@ namespace facturacion.controlador
             }
             catch (MySqlException ex)
             {
+               
                 resp = 0;
                 throw ex;
             }

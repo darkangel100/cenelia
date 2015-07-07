@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblhora = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -212,14 +214,14 @@
             // facturaciònToolStripMenuItem
             // 
             this.facturaciònToolStripMenuItem.Name = "facturaciònToolStripMenuItem";
-            this.facturaciònToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturaciònToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.facturaciònToolStripMenuItem.Text = "Facturaciòn";
             this.facturaciònToolStripMenuItem.Click += new System.EventHandler(this.facturaciònToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.listarToolStripMenuItem.Text = "Listar & Anular";
             // 
             // proveedorToolStripMenuItem
@@ -274,6 +276,12 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +332,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarReportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
 
     }
 }

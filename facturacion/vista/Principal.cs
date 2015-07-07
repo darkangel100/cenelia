@@ -103,6 +103,11 @@ namespace facturacion.vista
             factura.Show();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToLongTimeString();
+        }
+
         
 
         

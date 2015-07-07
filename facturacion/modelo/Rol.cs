@@ -32,10 +32,6 @@ namespace facturacion.modelo
             set { nombre = value; }
         }
        
-        override
-        public string ToString()
-        {
-            return this.nombre;
-        }
+        
     }
 }

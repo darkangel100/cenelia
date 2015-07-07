@@ -29,6 +29,7 @@ namespace facturacion.vista
       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             verificar();
         }
 
@@ -84,16 +85,31 @@ namespace facturacion.vista
 
         private void Frm_inicio_Load(object sender, EventArgs e)
         {
-            //Centrar el Panel
-            //Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor
-            //Int32 alto = (desktopSize.Height - 280) / 2;
-            //Int32 ancho = (desktopSize.Width - 500) / 2;
-            //panel1.Location = new Point(ancho, alto);
-            //Fin central el Panel
-
             //Mostrar Fecha y Hora
             lblFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToLongTimeString();
+            CuentaDB objC = new CuentaDB();
+
+            int numeroC = objC.cuentaE();
+            if (numeroC == 0)
+            {
+                Frm_NuevoUsuario newUsu = new Frm_NuevoUsuario();
+                newUsu.Show();
+            }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {lblHora.Text = DateTime.Now.ToLongTimeString();
+            
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Size = new Size(120,80);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Size = new Size(100,72);
         }
 
         

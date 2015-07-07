@@ -20,6 +20,8 @@ namespace facturacion
         private void Frm_RegistroEmpresa_Load(object sender, EventArgs e)
         {
             llenaEmpresas();
+            EmpresaDB objE = new EmpresaDB();
+          
         }
         int fila = 0;
         public void llenaEmpresas()
@@ -105,8 +107,22 @@ namespace facturacion
             emp.getEmpresa().Telefono = textBox2.Text.Trim();
             emp.getEmpresa().Direccion = textBox3.Text.Trim();
             emp.getEmpresa().Pais = textBox4.Text.Trim();
-            emp.getEmpresa().IdEmpresa = int.Parse(tbl_tabla.Rows[fila].Cells[5].Value.ToString());
+          //  emp.getEmpresa().IdEmpresa = int.Parse(tbl_tabla.Rows[fila].Cells[5].Value.ToString());
             
+            if (rba.Checked == true)
+                emp.getEmpresa().Estado = "A";
+            else
+                emp.getEmpresa().Estado = "P";
+            return emp;
+        }
+        private EmpresaDB llenaEmpresaM(EmpresaDB emp)
+        {
+            emp.getEmpresa().NombreEmpresa = textBox1.Text.Trim();
+            emp.getEmpresa().Telefono = textBox2.Text.Trim();
+            emp.getEmpresa().Direccion = textBox3.Text.Trim();
+            emp.getEmpresa().Pais = textBox4.Text.Trim();
+             emp.getEmpresa().IdEmpresa = int.Parse(tbl_tabla.Rows[fila].Cells[5].Value.ToString());
+
             if (rba.Checked == true)
                 emp.getEmpresa().Estado = "A";
             else
@@ -119,7 +135,7 @@ namespace facturacion
             {
                EmpresaDB objE = new EmpresaDB();
                 int resp;
-                 llenaEmpresa (objE);
+                 llenaEmpresaM (objE);
                 resp = objE.ActualizaEmpresa(objE.getEmpresa());
                 if (resp == 0)
                 {
@@ -201,5 +217,7 @@ namespace facturacion
             textBox1.Focus();
             ptbguardar.Enabled = true;
         }
+
+        
     }
 }
