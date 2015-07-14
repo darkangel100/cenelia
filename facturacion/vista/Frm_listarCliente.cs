@@ -45,8 +45,7 @@ namespace facturacion.vista
                         }                 
                     }
                     else
-                    {
-apellido += letra;
+                    {apellido += letra;
                     llenaClientes(apellido,tipoC);
                     }
                 }
@@ -66,7 +65,7 @@ apellido += letra;
             {
                 tbl_tabla .Rows.Clear();
                 PersonaDB objP = new PersonaDB();
-                if (tipoc == 0) { objP.getPersona().ListaPersonas = objP.TraePersonasC(est); }     
+                if (tipoc == 0) { objP.setPersona(objP.TraePersonasC(est)); ; }     
                 else {  objP.getPersona().ListaPersonas = objP.TraePersonas(est);  }
 
                 if (objP.getPersona().ListaPersonas.Count == 0)
@@ -136,7 +135,7 @@ apellido += letra;
          try
          {
              PersonaDB objP = new PersonaDB();
-             objP.setPersona(objP.TraePersona(tbl_tabla. Rows[fila].Cells[0].Value.ToString()));
+             objP.setPersona(objP.TraePersona(txt_cedula.Text.ToString()));
              if (objP.getPersona().Cedula == "")
              {
                  MessageBox.Show("No existe registro del Cliente", "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

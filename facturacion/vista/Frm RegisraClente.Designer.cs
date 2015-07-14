@@ -139,6 +139,7 @@
             // txt_cedula
             // 
             this.txt_cedula.Location = new System.Drawing.Point(118, 50);
+            this.txt_cedula.MaxLength = 10;
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(288, 20);
             this.txt_cedula.TabIndex = 88;
@@ -195,6 +196,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_RegisraClente";
             this.Text = "Frm_RegisraClente";
+            this.Load += new System.EventHandler(this.Frm_RegisraClente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

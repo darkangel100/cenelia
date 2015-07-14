@@ -59,6 +59,8 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="controlador\CuentaDB.cs" />
     <Compile Include="controlador\EmpresaDB.cs" />
+    <Compile Include="controlador\FacturaDB.cs" />
+    <Compile Include="controlador\detallefacturaDB.cs" />
     <Compile Include="controlador\LotesDB.cs" />
     <Compile Include="controlador\PersonaDB.cs" />
     <Compile Include="controlador\ProductoDB.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="controlador\RolDB.cs" />
     <Compile Include="controlador\UsuarioDB.cs" />
     <Compile Include="controlador\Utiles.cs" />
+    <Compile Include="modelo\Lote.cs" />
     <Compile Include="vista\Frm_Lotes.cs">
       <SubType>Form</SubType>
     </Compile>

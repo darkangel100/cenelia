@@ -406,6 +406,7 @@
             this.txtced.Name = "txtced";
             this.txtced.Size = new System.Drawing.Size(128, 20);
             this.txtced.TabIndex = 3;
+            this.txtced.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtced_KeyDown);
             this.txtced.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtced_KeyPress);
             // 
             // label2

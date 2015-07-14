@@ -323,5 +323,10 @@ namespace facturacion.vista
         {
 
         }
+
+        private void txtced_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

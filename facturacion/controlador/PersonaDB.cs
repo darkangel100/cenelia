@@ -61,16 +61,60 @@ namespace facturacion.controlador
             per = null;
             return resp;
         }
-        public List<Persona> TraePersonasC(string letra)//metodo trae cliente por cedula
+    //    public List<Persona> TraePersonas(string est)
+    //    {
+    //PersonaDB per = null;
+    //        List<Persona> ListaUsu = new List<Persona>();
+    //        MySqlCommand cmd;
+    //        MySqlConnection cn = con.GetConnection();
+
+    //        try
+    //        {
+    //            string sqlcad = "Select * from Usuario where eat_usu='" + est + "' order by ape_usu";
+    //            cmd = new MySqlCommand(sqlcad, cn);
+    //            cmd.CommandType = CommandType.Text;
+    //            cn.Open();
+    //            MySqlDataReader dr = cmd.ExecuteReader();
+    //            while (dr.Read())
+    //            {
+    //                per = new PersonaDB();
+    //                per.getPersona().Cedula = dr[0].ToString();
+    //                per.getPersona().Apellido = dr[1].ToString();
+    //                per.getPersona().Nombre= dr[2].ToString();
+    //                per.getPersona().Direccion = dr[3].ToString();
+    //                per.getPersona().Telefono= dr[4].ToString();
+    //                per.getPersona().Estado= dr[5].ToString();
+                   
+
+    //                per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+    //                ListaUsu.Add(per.getPersona());
+
+    //            }
+    //            dr.Close();
+    //        }
+    //        catch (MySqlException ex)
+    //        {
+    //            per = null;
+    //            throw ex;
+
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            per = null;
+    //            throw ex;
+    //        }
+    //        cn.Close();
+    //        cmd = null;
+    //        return ListaUsu;
+    //    }
+        public Persona TraePersonasC(string letra)//metodo trae cliente por cedula
         {
             PersonaDB per = null;
-            List<Persona> ListaCli = new List<Persona>();
             MySqlCommand cmd;
-            MySqlConnection cn = con.GetConnection();
+            MySqlConnection cn = con.GetConnection(); 
             try
             {
-              
-                string sqlcad = " select * from persona where rol_idrol=0 and   cedula=  '" + letra + "'";
+                string sqlcad = "Select * from persona where cedula='" + letra + "'";
                 cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
@@ -78,20 +122,18 @@ namespace facturacion.controlador
                 while (dr.Read())
                 {
                     per = new PersonaDB();
-                    per.getPersona().Id_persona = int.Parse(dr[0].ToString());
+                    per.getPersona().Id_persona = int.Parse( dr[0].ToString());
                     per.getPersona().Cedula = dr[1].ToString();
-                    per.getPersona().Nombre = dr[2].ToString();
-                    per.getPersona().Apellido = dr[3].ToString();
+                    per.getPersona().Apellido = dr[2].ToString();
+                    per.getPersona().Nombre= dr[3].ToString();
                     per.getPersona().Direccion = dr[4].ToString();
-                    per.getPersona().Telefono = dr[5].ToString();
-                    per.getPersona().Estado = dr[6].ToString();
-
-                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
-                    ListaCli.Add(per.getPersona());
+                    per.getPersona().Telefono= dr[5].ToString();
+                    per.getPersona().Estado= dr[6].ToString();
+                    per.getPersona().Nombre = dr[2].ToString()+" " + dr[3].ToString();
                 }
                 dr.Close();
             }
-            catch (MySqlException ex)
+            catch (MySqlException ex)//este metodo me trae un negro grandote...q rico que me monte...!!!
             {
                 per = null;
                 throw ex;
@@ -103,7 +145,7 @@ namespace facturacion.controlador
             }
             cn.Close();
             cmd = null;
-            return ListaCli;
+            return per.getPersona();
         }
         public List<Persona> TraePersonas(string letra)//metodo trae cliente por apellido
         {
@@ -130,7 +172,7 @@ namespace facturacion.controlador
                     per.getPersona().Telefono = dr[5].ToString();
                     per.getPersona().Estado = dr[6].ToString();
 
-                    //per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
+                    per.getPersona().Nombre = per.getPersona().Apellido + " " + per.getPersona().Nombre;
                     ListaCli.Add(per.getPersona());
                 }
                 dr.Close();

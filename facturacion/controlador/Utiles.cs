@@ -12,6 +12,12 @@ namespace facturacion.controlador
 {
     class Utiles
     {
+        public static string girafecha(String f)
+        {
+            String fec = "";
+            fec = f.Substring(6, 4) + "-" + f.Substring(3, 2) + "-" + f.Substring(0, 2);
+            return fec;
+        }
         public static bool requerido(Component texto,ErrorProvider error)
         {
             TextBox txt = (TextBox)texto;
@@ -271,5 +277,24 @@ namespace facturacion.controlador
             return ci;
 
         }
+        public static string ObtenerRuta()
+        {
+            string directory = "";
+            directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            return directory;
+        }
+        public static void guardarReporte(string datos, string nombre)
+        {
+            try
+            {
+                StreamWriter escribir = new StreamWriter(Utiles.ObtenerRuta() + "/cnch/" + nombre + ".html");
+                escribir.Write(datos);
+                escribir.Close();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
     }
 }

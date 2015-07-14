@@ -22,11 +22,6 @@ namespace facturacion.vista
         {
             InitializeComponent();
         }
-
-       
-
-       
-
         private void Principal_Load(object sender, EventArgs e)
         {
              lblfecha.Text = DateTime.Now.ToShortDateString();
@@ -43,24 +38,28 @@ namespace facturacion.vista
         private void registrarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_registarproveedor proveedor = new Frm_registarproveedor();
+           proveedor.MdiParent = this;
             proveedor.Show();
         }
 
         private void reguistraClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_RegisraClente cliente = new Frm_RegisraClente();
+            cliente.MdiParent = this;
             cliente.Show();
         }
 
         private void registrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Producto pro = new Frm_Producto();
+            pro.MdiParent = this;
             pro.Show();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmUsuario usuario = new FrmUsuario();
+            usuario.MdiParent = this;
             usuario.Show();
         }
 
@@ -72,34 +71,20 @@ namespace facturacion.vista
         private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_listarCliente listacliente = new Frm_listarCliente();
+            listacliente.MdiParent = this;
             listacliente.Show();
         }
 
         private void registrarEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_RegistroEmpresa empreas = new Frm_RegistroEmpresa();
+            empreas.MdiParent = this;
             empreas.Show();
         }
-
-        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_listarproveedor proveedor = new Frm_listarproveedor();
-            proveedor.Show();
-        }
-
-        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void facturaciònToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_factura factura = new Frm_factura();
+            factura.MdiParent = this;
             factura.Show();
         }
 
@@ -108,11 +93,17 @@ namespace facturacion.vista
             lblhora.Text = DateTime.Now.ToLongTimeString();
         }
 
-        
+        private void listarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_listarProducto listar = new frm_listarProducto();
+           listar.MdiParent = this;
+            listar.Show();
+        }
 
-        
-       
-
-        
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+      
     }
 }

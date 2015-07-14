@@ -67,9 +67,9 @@
             this.panel2.Controls.Add(this.btnmin);
             this.panel2.Controls.Add(this.btncerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 312);
+            this.panel2.Location = new System.Drawing.Point(0, 660);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(829, 40);
+            this.panel2.Size = new System.Drawing.Size(1100, 40);
             this.panel2.TabIndex = 3;
             // 
             // lblhora
@@ -90,7 +90,7 @@
             this.lblfecha.BackColor = System.Drawing.Color.Transparent;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblfecha.Location = new System.Drawing.Point(637, 10);
+            this.lblfecha.Location = new System.Drawing.Point(908, 10);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(115, 25);
             this.lblfecha.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.btnmin.BackColor = System.Drawing.Color.Maroon;
             this.btnmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmin.ForeColor = System.Drawing.Color.White;
-            this.btnmin.Location = new System.Drawing.Point(758, 1);
+            this.btnmin.Location = new System.Drawing.Point(1029, 1);
             this.btnmin.Name = "btnmin";
             this.btnmin.Size = new System.Drawing.Size(36, 36);
             this.btnmin.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.btncerrar.BackColor = System.Drawing.Color.Maroon;
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.Color.White;
-            this.btncerrar.Location = new System.Drawing.Point(793, 1);
+            this.btncerrar.Location = new System.Drawing.Point(1064, 1);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(36, 36);
             this.btncerrar.TabIndex = 2;
@@ -137,7 +137,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(829, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1100, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -193,6 +193,7 @@
             this.listarProductosToolStripMenuItem.Name = "listarProductosToolStripMenuItem";
             this.listarProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.listarProductosToolStripMenuItem.Text = "Listar productos";
+            this.listarProductosToolStripMenuItem.Click += new System.EventHandler(this.listarProductosToolStripMenuItem_Click);
             // 
             // registrarProductosToolStripMenuItem
             // 
@@ -209,7 +210,7 @@
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
-            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
+          
             // 
             // facturaciònToolStripMenuItem
             // 
@@ -233,8 +234,7 @@
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
             this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.proveedorToolStripMenuItem.Text = "Administra Proveedor";
-            this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
-            // 
+             // 
             // registrarProveedorToolStripMenuItem
             // 
             this.registrarProveedorToolStripMenuItem.Name = "registrarProveedorToolStripMenuItem";
@@ -247,7 +247,6 @@
             this.listarProveedorToolStripMenuItem.Name = "listarProveedorToolStripMenuItem";
             this.listarProveedorToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.listarProveedorToolStripMenuItem.Text = "Listar Proveedor";
-            this.listarProveedorToolStripMenuItem.Click += new System.EventHandler(this.listarProveedorToolStripMenuItem_Click);
             // 
             // registrarEmpresaToolStripMenuItem
             // 
@@ -275,6 +274,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -289,12 +289,13 @@
             this.AutoSize = true;
             this.BackgroundImage = global::facturacion.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(829, 352);
+            this.ClientSize = new System.Drawing.Size(1100, 700);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "Principal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Load);

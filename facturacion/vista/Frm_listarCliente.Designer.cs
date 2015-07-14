@@ -94,6 +94,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::facturacion.Properties.Resources.search_red_icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Enabled = false;
             this.pictureBox2.Location = new System.Drawing.Point(394, 32);

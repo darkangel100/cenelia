@@ -62,8 +62,8 @@ namespace facturacion.vista
                     {
 
                         Principal prin = new Principal();
-                        prin.ShowDialog();
-                        this.Close();
+                        prin.Show();
+                        this.Dispose(false);
                     }
                     else
                     {

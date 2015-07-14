@@ -8,12 +8,21 @@ namespace facturacion.modelo
     class Factura
     {
         private int id_factura;
-        private DateTime fecha;
+        private String fecha;
         private double iva;
         private double subtotal;
         private double total;
-        private String num_factura;
-        private Persona persona;
+        private int num_factura;
+       
+        private List<Factura> listaFactura = new List<Factura>();
+        private int idpersona;
+
+        public int Idpersona       {
+            get { return idpersona; }
+            set { idpersona = value; }
+        }
+
+       
         //private List<DetalleFactura> listaDetalle = new List<DetalleFactura>();
 
 
@@ -24,21 +33,12 @@ namespace facturacion.modelo
         //}
 
 
-        internal Persona Persona
-        {
-            get { return persona; }
-            set { persona = value; }
-        }
+        
 
 
 
-        public int Id_factura
-        {
-            get { return id_factura; }
-            set { id_factura = value; }
-        }
-
-        public DateTime Fecha
+        
+        public String Fecha
         {
             get { return fecha; }
             set { fecha = value; }
@@ -62,7 +62,7 @@ namespace facturacion.modelo
             set { total = value; }
         }
 
-        public string Num_factura
+        public int Num_factura
         {
             get { return num_factura; }
             set { num_factura = value; }

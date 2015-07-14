@@ -137,22 +137,21 @@ namespace facturacion.controlador
             cmd = null;
            return listalote;
         }
-        public Produccto traeLote(string lot)
+        public Lote traeLote(string lot)
         {
-            Produccto p = null;
             Lote l = null;
             MySqlCommand cmd;
             MySqlConnection cn = con.GetConnection();
             try
             {
-                string comandoSql = "Select * from producto where idLote='" + lot + "'";
+                string comandoSql = "Select * from lote where idLote='" + lot + "'";
                 cmd = new MySqlCommand(comandoSql, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    p = new Produccto();
+                    
                     l = new Lote();
                     l.Id_Lote = int.Parse(dr["idLote"].ToString());
                     l.Fechcad= Convert.ToDateTime(dr["fechacadu_lote"].ToString());
@@ -167,17 +166,58 @@ namespace facturacion.controlador
             }
             catch (MySqlException ex)
             {
-                p = null;
+                l = null;
                 throw ex;
             }
             catch (Exception ex)
             {
-                p = null;
+                l = null;
                 throw ex;
             }
             cn.Close();
             cmd = null;
-            return p;
+            return l;
+        }
+        public Lote traeLotefai(string lot)
+        {
+            Lote l = null;
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            try
+            {
+                string comandoSql = "Select * from lote where idLote='" + lot + "'";
+                cmd = new MySqlCommand(comandoSql, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    l = new Lote();
+                    l.Id_Lote = int.Parse(dr["idLote"].ToString());
+                    //l.Fechcad = Convert.ToDateTime(dr["fechacadu_lote"].ToString());
+                    l.Stock = dr["stock_lote"].ToString();
+                   // l.Fechelab = Convert.ToDateTime(dr["fechaelab"].ToString());
+                    l.Pv = double.Parse(dr["pv_lote"].ToString());
+                    l.Pc = double.Parse(dr["pc_lote"].ToString());
+                   // l.Caduca = Convert.ToDateTime(dr["caduca"].ToString());
+
+                }
+                dr.Close();
+            }
+            catch (MySqlException ex)
+            {
+                l = null;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                l = null;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return l;
         }
         public int actualizaLotesStock(Lote l)
         {
@@ -188,6 +228,33 @@ namespace facturacion.controlador
             {
                 string comandoSql = "Update producto set fechaelab='" + l.Fechelab + "' WHERE idLote='" + l.Id_Lote + "'";
                 cmd = new MySqlCommand(comandoSql, cn);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                resp = cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                resp = 0;
+                throw ex;
+            }
+            cn.Close();
+            cmd = null;
+            return resp;
+        }
+        public int ActualizaCantidad(int co, int can)
+        {
+            MySqlCommand cmd;
+            MySqlConnection cn = con.GetConnection();
+            int resp;
+            try
+            {
+                string sqlcad = "Update lote set stock_lote=stock_lote-" + can + " WHERE idlote='" + co + "'";
+                cmd = new MySqlCommand(sqlcad, cn);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 resp = cmd.ExecuteNonQuery();

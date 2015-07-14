@@ -8,7 +8,7 @@ namespace facturacion.modelo
     class detalleFactura
     {
 
-        private int id_detalle;
+        
         private int cantidad;
         private double pvp;
         private Factura factura;
@@ -16,13 +16,28 @@ namespace facturacion.modelo
         private String detalle;
         private double total;
         private double iva;
-        private double descuento;
+        private double subtotal;
+        private int idlote;
 
-        public double Descuento
+        public int Idlote
         {
-            get { return descuento; }
-            set { descuento = value; }
+            get { return idlote; }
+            set { idlote = value; }
         }
+        public double Subtotal
+        {
+            get { return subtotal; }
+            set { subtotal = value; }
+        }
+       
+        private int idfactura;
+
+        public int Idfactura
+        {
+            get { return idfactura; }
+            set { idfactura = value; }
+        }
+       
         public double Iva
         {
             get { return iva; }
@@ -41,11 +56,7 @@ namespace facturacion.modelo
             set { detalle = value; }
         }
 
-        public int Id_detalle
-        {
-            get { return id_detalle; }
-            set { id_detalle = value; }
-        }
+       
 
         public int Cantidad
         {

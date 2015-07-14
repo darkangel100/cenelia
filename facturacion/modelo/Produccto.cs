@@ -15,6 +15,16 @@ namespace facturacion.modelo
         private List<Produccto> listaProductos = new List<Produccto>();
         private string marca;
         private int id_lote;
+
+        public int Id_lote
+        {
+            get { return id_lote; }
+            set { id_lote = value; }
+        }
+       
+
+        
+       
         private List<Lote> lote = new List<Lote>();
         public string Codigo
         {

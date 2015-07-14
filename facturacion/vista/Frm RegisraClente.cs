@@ -11,9 +11,10 @@ using facturacion.controlador;
 
 namespace facturacion.vista
 {
-    public partial class Frm_RegisraClente : Form
+ 
+ public partial  class Frm_RegisraClente : Form
     {
-        public Frm_RegisraClente()
+       public Frm_RegisraClente()
         {
             InitializeComponent();
         }
@@ -76,6 +77,11 @@ namespace facturacion.vista
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Frm_RegisraClente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

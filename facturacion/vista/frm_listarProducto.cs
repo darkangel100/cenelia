@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Reflection;
 
 using facturacion.controlador;
+using System.Diagnostics;
 
 namespace facturacion.vista
 {
@@ -116,7 +117,7 @@ namespace facturacion.vista
                 tbl_tabla.Rows.Clear();
                 LotesDB objL = new LotesDB();
                 ProductoDB objP = new ProductoDB();
-                //if (tipoc == 0) { objP.getProductos().ListaProductos =   objP.traeProducto(cod); }
+                //if (tipoc == 0) { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
                 //else { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
 
                 if (objP.getProductos().ListaProductos.Count == 0)
@@ -142,6 +143,88 @@ namespace facturacion.vista
             catch (Exception ex)
             {
                 MessageBox.Show("Error Al Presentar los Datos," + ex.Message, "Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    string salida = "<html><head><title>Listado de productos</title><meta http-equiv='content-type' content='text/html; charset=utf-8'/><link rel='stylesheet' href='tablas.css' type='text/css' media='all' />";
+        //    salida += "</head><body>";
+        //    tbl_tabla.Rows.Clear();
+        //    LotesDB objL = new LotesDB();
+        //    ProductoDB objP = new ProductoDB();
+        //    objP.getProductos().ListaProductos = objP.listarProductos();
+        //    if (tipoc == 0) { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
+        //    else { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
+        //    salida += "<h1>Reporte de Productos</h1></br>";
+        //    if (objP.getProductos().ListaProductos.Count == 0)
+        //    {
+
+        //        salida += "<p><span><strong>No existen datos que mostrar</strong></span></p></br>";
+        //    }
+        //    else
+        //    {
+        //        salida += "<table style='border: solid 1px; color= '#f0f'><thead bgcolor='RED'><tr><th>Nro</th><th>Nombre</th><th>Stock</th><th>Fecha Cad</th><th>Fecha Elab</th></tr></thead><tbody>";
+        //        fila = 0;
+        //        for (int i = 0; i < objP.getProductos().ListaProductos.Count; i++)
+        //        {
+        //            salida += "<tr>";
+        //            salida += "<td>" + (i + 1) + "</td>";
+        //            salida += "<td>" + objP.getProductos().ListaProductos[i].Nombre + "</td>";
+        //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Stock + "</td>";
+        //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Fechcad + "</td>";
+        //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Fechelab + "</td>";
+        //            salida += "</tr>";
+
+        //        }
+        //    }
+        //    salida += "</tbody></table>";
+        //    salida += "</body></html>";
+        //    Utiles.guardarReporte(salida, "producto");
+        //    Process.Start(Utiles.ObtenerRuta() + "/cnch/producto.html");
+        //}
+
+        private void ptbguardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //string salida = "<html><head><title>Listado de productos</title><meta http-equiv='content-type' content='text/html; charset=utf-8'/><link rel='stylesheet' href='tablas.css' type='text/css' media='all' />";
+            //    salida += "</head><body>";
+            //    tbl_tabla.Rows.Clear();
+            //    LotesDB objL = new LotesDB();
+            //    ProductoDB objP = new ProductoDB();
+            //    objP.getProductos().ListaProductos = objP.listarProductos();
+            //    if (tipoc == 0) { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
+            //    else { objP.getProductos().ListaProductos = objP.traeProducto(cod); }
+            //    salida += "<h1>Reporte de Productos</h1></br>";
+            //    if (objP.getProductos().ListaProductos.Count == 0)
+            //    {
+
+            //        salida += "<p><span><strong>No existen datos que mostrar</strong></span></p></br>";
+            //    }
+            //    else
+            //    {
+            //        salida += "<table style='border: solid 1px; color= '#f0f'><thead bgcolor='RED'><tr><th>Nro</th><th>Nombre</th><th>Stock</th><th>Fecha Cad</th><th>Fecha Elab</th></tr></thead><tbody>";
+            //        fila = 0;
+            //        for (int i = 0; i < objP.getProductos().ListaProductos.Count; i++)
+            //        {
+            //            salida += "<tr>";
+            //            salida += "<td>" + (i + 1) + "</td>";
+            //            salida += "<td>" + objP.getProductos().ListaProductos[i].Nombre + "</td>";
+            //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Stock + "</td>";
+            //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Fechcad + "</td>";
+            //            salida += "<td>" + objP.getProductos().ListaProductos[i].Lote_obj.Fechelab + "</td>";
+            //            salida += "</tr>";
+
+            //        }
+            //    }
+            //    salida += "</tbody></table>";
+            //    salida += "</body></html>";
+            //    Utiles.guardarReporte(salida, "producto");
+            //    Process.Start(Utiles.ObtenerRuta() + "/cnch/producto.html");
             }
         }
     }
