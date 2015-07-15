@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tc1 = new System.Windows.Forms.TabControl();
             this.tp1 = new System.Windows.Forms.TabPage();
             this.chkeliminados = new System.Windows.Forms.CheckBox();
@@ -61,12 +62,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtced = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tc1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tp2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tc1
@@ -215,7 +218,6 @@
             this.txtusuario.Location = new System.Drawing.Point(272, 117);
             this.txtusuario.MaxLength = 40;
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.PasswordChar = '*';
             this.txtusuario.Size = new System.Drawing.Size(101, 20);
             this.txtusuario.TabIndex = 26;
             // 
@@ -419,6 +421,10 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cédula:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +444,7 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,5 +484,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

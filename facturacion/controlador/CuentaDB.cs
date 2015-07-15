@@ -191,10 +191,6 @@ namespace facturacion.controlador
             cmd = null;
             return resp;
         }
-        public void traeidperCuenta(Cuenta cuent)
-        {
-
-        }
         public int cuentaE()
         {
             MySqlCommand cmd;

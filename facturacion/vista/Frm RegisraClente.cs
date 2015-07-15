@@ -23,7 +23,8 @@ namespace facturacion.vista
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-            if (txt_cedula.Text.Trim().Length > 0 || txt_apellido.Text.Trim().Length > 0 || txt_nombre.Text.Trim().Length > 0)
+
+           if (Utiles.requerido(this.txt_cedula, errorProvider1) && Utiles.requerido(this.txt_apellido, errorProvider1) && Utiles.requerido(this.txt_nombre, errorProvider1) && Utiles.requerido(this.txt_direccion, errorProvider1))
             {
                 Adiciona();
                 Utiles.limpiar(panel1.Controls);

@@ -225,7 +225,7 @@ namespace facturacion.vista
             //    salida += "</body></html>";
             //    Utiles.guardarReporte(salida, "producto");
             //    Process.Start(Utiles.ObtenerRuta() + "/cnch/producto.html");
-            }
+          
         }
     }
 }

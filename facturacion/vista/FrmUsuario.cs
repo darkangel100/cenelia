@@ -22,36 +22,42 @@ namespace facturacion.vista
         Utiles util = new Utiles();
         private void btnGuarda_Click(object sender, EventArgs e)
         {
-            PersonaDB objp = new PersonaDB();
             if (estado == "N")
             {
-                num = objp.traenumero();
-                if (num.Equals(""))
-                {
-                    id_persona = 1;
-                }
-                else
-                {
-                    id_persona = Convert.ToInt32(num);
-                    id_persona++;
-                }
-            }
-            if (estado == "N")
+                Utiles.verificar(txtced.Text);
+            }          
+            if (Utiles.requerido(this.txtced, errorProvider1) && Utiles.requerido(this.txtape, errorProvider1) && Utiles.requerido(this.txtnom, errorProvider1) && Utiles.requerido(this.txtcla, errorProvider1) && Utiles.requerido(this.txtusuario, errorProvider1))
             {
-              
+                PersonaDB objp = new PersonaDB();
+                if (estado == "N")
+                {
+                    num = objp.traenumero();
+                    if (num.Equals(""))
+                    {
+                        id_persona = 1;
+                    }
+                    else
+                    {
+                        id_persona = Convert.ToInt32(num);
+                        id_persona++;
+                    }
+                }
+                if (estado == "N")
+                {
 
-               Adiciona();
-                  
-                
-            }
-            if (estado == "E")
-            {
-                editar();
-            }
-            Utiles.limpiar(panel1.Controls);
-            indice = 0;
-            tc1.SelectTab(indice);
 
+                    Adiciona();
+
+
+                }
+                if (estado == "E")
+                {
+                    editar();
+                }
+                Utiles.limpiar(panel1.Controls);
+                indice = 0;
+                tc1.SelectTab(indice);
+            }
         }
         private void Adiciona()
         {
@@ -190,8 +196,7 @@ namespace facturacion.vista
 
         private void txtced_KeyPress(object sender, KeyPressEventArgs e)
        {
-            
-          //  Utiles.validacedula(txtced, e);
+              Utiles.validacedula(txtced, e);
         }
         private void editar()
         {
